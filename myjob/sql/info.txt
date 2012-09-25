@@ -1,0 +1,3 @@
+Aqui colocaremos las vistas, procedimientos, disparadores, etc. 
+de la base de datos.
+Formato de Archivo: nombreFuncion.sql

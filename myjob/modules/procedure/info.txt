@@ -1,0 +1,2 @@
+Aqui colocaremos los procedimientos que necesitemos
+es la simulacion del controlador.
