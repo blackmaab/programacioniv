@@ -11,7 +11,7 @@ jQuery.validarCampos=function(nameForm){
             $(this).addClass('errorText');
             contadorErrores++;
         }else{
-            $(this).addClass('contact_input');		
+            $(this).addClass('defaultText');		
         }
     });
 		
@@ -24,7 +24,7 @@ jQuery.validarCampos=function(nameForm){
             $(this).addClass('errorText');
             contadorErrores++;
         }else{
-            $(this).addClass('contact_input');
+            $(this).addClass('defaultText');
         }
     });
 		
@@ -50,7 +50,7 @@ jQuery.validarCampos=function(nameForm){
             $(this).addClass('errorSelect');
             contadorErrores++;
         }else{
-            $(this).addClass('contact_input');
+            $(this).addClass('defaultText');
         }
     });
 		
@@ -140,7 +140,7 @@ jQuery.mensajeInformativo=function(mensaje,tipoError){
             titl='Error';
             image='images/advertencia.png';
             w=255;
-            h=135;		
+            h=150;		
             break;
             ;
 		
@@ -148,14 +148,14 @@ jQuery.mensajeInformativo=function(mensaje,tipoError){
             titl='Exito';
             image='images/exito.png';
             w=270;
-            h=135;
+            h=150;
             break;
 		
         case 'login':
             titl='Exito';
             image='images/exito.png';
             w=270;
-            h=135;
+            h=150;
             funcion=function(){
                 window.location='?mod=home';
             };
@@ -166,7 +166,7 @@ jQuery.mensajeInformativo=function(mensaje,tipoError){
             titl='Error';
             image='images/advertencia.png';
             w=270;
-            h=135;
+            h=150;
             funcion=function(){
                 window.location='?mod=admin';
             };
@@ -178,8 +178,8 @@ jQuery.mensajeInformativo=function(mensaje,tipoError){
     }
 	
     $('#divMensaje')
-    .html('<img src="'+image+'" class="imgInformacion"/>'+mensaje)		
-    .addClass('mensInformation')
+    .html('<img src="'+image+'" class="imgInformacion"/><div class="mensInformation">'+mensaje+'</div>')		
+    //.addClass('mensInformation')
     .dialog({
         title:titl,
         draggable:false,

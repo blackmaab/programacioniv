@@ -11,6 +11,12 @@ $conf['home'] = array(
     'layout' => LAYOUT_DEFECTO
 );
 
+
+$conf['myAccount'] = array(
+    'archivo' => 'pages/frmUsuario.php',
+    'layout' => LAYOUT_DEFECTO
+);
+
 /* ERROR AL NO ENCONTRAR LA PÁGINA */
 $conf['404'] = array(
     'archivo' => 'pages/404.php',

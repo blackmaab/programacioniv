@@ -493,3 +493,32 @@ a:hover {
     font-size: 30px;
     color: #FFFFFF;
 }
+
+
+/*******MENSAJES DE ERROR***********/
+.errorText, .errorTextArea{
+    border: #636161 solid 1px;
+    background: #FAC7C7;
+}
+
+.defaultText{
+    border: #2B546E solid 1px;
+    color: #0969A9;
+}
+
+.mensInformation{
+    font-family: Calibri;
+    font-size:18px;
+    text-align: center;
+    /*color:#F00;
+    border: solid 1px #039;
+    position:absolute;
+    margin-top:-20px;
+    margin-left:150px;
+/*	background-image:url(../../images/mensajes/blackMini1.png);*/
+    /*background-repeat:no-repeat;*/
+}
+.imgInformacion{
+    float: left;
+    border: none;  
+}

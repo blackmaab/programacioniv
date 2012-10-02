@@ -4,11 +4,16 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Mi empleo</title>
 
-        <link href="css/letters.css" rel="stylesheet" type="text/css" media="screen">
-            <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-            <link href="css/tipsy.css" rel="stylesheet" type="text/css" media="screen" />
-            <script type="text/javascript" src="js/jquery-1.8.1.js"></script>
-            <script type="text/javascript" src="js/start_validate.js"></script>
+
+        <link href="css/letters.css" rel="stylesheet" type="text/css" media="screen">            
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/tipsy.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/jquery-ui-1.7.3.custom.css" rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/jquery-1.6.1.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+        <script type="text/javascript" src="js/tipsy.js"></script>
+        <script type="text/javascript" src="js/start_validate.js"></script>
+        <script type="text/javascript" src="js/general.js"></script>
     </head>
 
     <body>
@@ -21,7 +26,7 @@
                     <div id="menu">
                         <ul>
                             <li class="current_page_item"><a href="?mod=home">Inicio</a></li>
-                            <li><a href="#">Mi Cuenta</a></li>
+                            <li><a href="?mod=myAccount">Mi Cuenta</a></li>
                             <li><a href="#">Trabajos</a></li>
                             <li><a href="#">Empresa</a></li>
                             <!--<li><a href="#">Contact</a></li>-->
@@ -47,7 +52,7 @@
                                 <form method="get" action="#">
                                     <div>
                                         <input type="text" name="s" id="search-text" value="" />
-                                        <input type="submit" id="search-submit" value="Buscar" />
+                                        <input type="button" id="search-submit" value="Buscar" />
                                     </div>
                                 </form>
                             </div>
@@ -104,5 +109,6 @@
             <p>Copyright (c) 2012 miempleo.com. Todos los Derechos Reservados.</p>
         </div>
         <!-- end #footer -->
+        <div id="divMensaje" align="center"></div>
     </body>
 </html>
