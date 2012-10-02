@@ -1,8 +1,8 @@
 <?php
 
 define('MODULO_DEFECTO', 'home');
-define('LAYOUT_DEFECTO', 'plantilla_defecto.php');
-define('MODULO_PATH', realpath('modulos'));
+define('LAYOUT_DEFECTO', 'layout_default.php');
+define('MODULO_PATH', realpath('modules'));
 define('LAYOUT_PATH', realpath('layouts'));
 
 
