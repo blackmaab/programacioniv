@@ -27,6 +27,7 @@
     <hr>
     <br>
     <br>
+    <h1>HEBER</h1>  
     <h1>Registrate</h1>
     <frm name="frmNewUser" id="frmNewUser" action="#">
         <table>
