@@ -1,8 +1,8 @@
-<frm name="frmPais" id="frmEstado" action="#">
+<frm name="frmEstado" id="frmEstado" action="#">
     <table>
         <tr>
             <td>Pais:</td>
-            <td><select name="sel" id="sel">
+            <td><select name="selPais" id="selPais">
                     <option value="-">--Seleccione--</option>
                     <option value="1">El Salvador</option>
                     <option value="2">Guatemala</option>
