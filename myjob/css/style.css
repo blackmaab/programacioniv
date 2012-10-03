@@ -533,3 +533,8 @@ a:hover {
     float: left;
     border: none;  
 }
+
+
+.rowPersona, .rowInstitucion, .oculto{
+    display: none;
+}
