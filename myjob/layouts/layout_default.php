@@ -27,8 +27,8 @@
                         <ul>
                             <li class="current_page_item"><a href="?mod=home">Inicio</a></li>
                             <li><a href="?mod=myAccount">Mi Cuenta</a></li>
-                            <li><a href="#">Trabajos</a></li>
-                            <li><a href="#">Empresa</a></li>
+                            <li><a href="?mod=home">Trabajos</a></li>
+                            <li><a href="?mod=viewCompanies">Empresas</a></li>
                             <!--<li><a href="#">Contact</a></li>-->
                         </ul>
                     </div>

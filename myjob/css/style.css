@@ -499,11 +499,13 @@ a:hover {
 .errorText, .errorTextArea{
     border: #636161 solid 1px;
     background: #FAC7C7;
+    text-align: center;
 }
 
 .defaultText{
     border: #2B546E solid 1px;
     color: #0969A9;
+    text-align: center;
 }
 
 .mensInformation{

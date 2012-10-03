@@ -168,7 +168,7 @@ jQuery.mensajeInformativo=function(mensaje,tipoError){
             w=270;
             h=100;
             funcion=function(){
-                window.location='?mod=homeEmpresa';
+                window.location='?mod=homeCompany';
             };
             break;
             ;

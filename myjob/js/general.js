@@ -6,6 +6,8 @@ $(document).ready(function(){
         gravity: 'w'
     });
     
+    //validacion de login
+    $("#btnLogin:button").button();
     $("#btnLogin").click(function(){
         //verificacion que los campos esten llenos
         if($.validarCampos("#frmLogin")==true){
@@ -52,8 +54,19 @@ $(document).ready(function(){
         return $.validarTecla(event,'#txtPais','nombre');
     });
     
-//validando datos en tiempo real
-/*$('#txtNombre').keypress(function(event){
-        return $.validarTecla(event,'#txtNombre','nombre');
-    });*/
+    //validacion de updateAccount
+    $("#btnUpdateAccount:button").button();
+    $("#btnUpdateAccount").click(function(){
+        if($.validarCampos("#frmUpdateAccount")){
+            if($("#txtPassword").attr("value")==$("#txtPasswordConfirm").attr("value")){
+                $.mensajeInformativo('Contraseña actualizada', 'i');
+                $.limpiarCampos("#frmUpdateAccount");
+            }else{
+                $.mensajeInformativo('Contraseñas no coiciden', 'e');
+            }
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+     
 });

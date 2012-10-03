@@ -1,11 +1,7 @@
-<h1>Datos de usuario</h1>
+<h1>Actualizaci&oacute;n de Credenciales</h1>
 <div id="divFormulario">
     <frm name="frmUpdateAccount" id="frmUpdateAccount" action="#">
-        <table>            
-            <tr>
-                <td>Usuario:</td>
-                <td><input type="text" name="txtUsuario" id="txtUsuario" title="Campo Requerido" class="defaultText"></td>
-            </tr>
+        <table>                        
             <tr>
                 <td>Contrase&ntilde;a:</td>
                 <td>
@@ -20,7 +16,7 @@
             </tr>
             <tr>                
                 <td colspan="2" align="right">
-                    <input type="button" name="btnUpdateAccount" id="btnUpdateAcount" value="Actualizar">                         
+                    <input type="button" name="btnUpdateAccount" id="btnUpdateAccount" value="Actualizar">                         
                 </td>
             </tr>            
         </table>

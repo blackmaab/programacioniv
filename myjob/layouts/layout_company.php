@@ -25,9 +25,9 @@
                     </div>
                     <div id="menu">
                         <ul>
-                            <li class="current_page_item"><a href="?mod=homeAdministrator">Inicio</a></li>
-                            <li><a href="?mod=catalogAdmin">Catalogos</a></li>
-                            <li><a href="?mod=viewAccountAdmin">Cuenta</a></li>
+                            <li class="current_page_item"><a href="?mod=homeCompany">Inicio</a></li>
+                            <li><a href="?mod=job">Creaci&oacute;n de Anuncios</a></li>
+                            <li><a href="?mod=viewAccountCompany">Cuenta</a></li>
                             <li><a href="#" id="linkLogout">Salir</a></li>
                             <!--<li><a href="#">Contact</a></li>-->
                         </ul>

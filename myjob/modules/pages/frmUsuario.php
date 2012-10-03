@@ -1,5 +1,5 @@
-<h1>Identificaci&oacute;n</h1>
 <div id="divFormulario">
+    <h1>Identificaci&oacute;n</h1>
     <frm name="frmLogin" id="frmLogin" action="#">
         <table>
             <tr>
@@ -20,5 +20,23 @@
         </table>
     </frm>
     <strong>*Usuarios: admin, empresa, user; password es igual al nombre.</strong>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <h1>Registrate</h1>
+    <frm name="frmNewUser" id="frmNewUser" action="#">
+        <table>
+            <tr>
+                <td>Nombre de Usuario:</td>
+                <td>
+                    <input type="text" name="txtNewUser" id="txtNewUser" title="Campo Requerido" class="defaultText">
+                </td>
+            </tr>
+        </table>
+    </frm>
 </div>
 
