@@ -38,15 +38,15 @@
         </div>
         <h3><a href="#">Herramientas / Equipos</a></h3>
         <div>
-           <!--Formulario-->
+           <?php include("modules/pages/frmEquipoHerramientas_admin.php");?>
         </div>
         <h3><a href="#">&Aacute;rea de Empleo</a></h3>
         <div>
-           <!--Formulario-->
+           <?php include("modules/pages/frmAreaTrabajo.php");?>
         </div>
         <h3><a href="#">Cargo de Empleo</a></h3>
         <div>
-           <!--Formulario-->
+           <?php include("modules/pages/frmTipoEmpleo_admin.php");?>
         </div>
         <h3><a href="#">Empresas / Instituciones</a></h3>
         <div>
