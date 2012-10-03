@@ -34,7 +34,7 @@ $(document).ready(function(){
     $("#linkLogout").click(function(){
         $.mensajeInformativo('Cerrando Sesion...','logout');
     });
-    
+
     
     //acordion
     $( "#accordion" ).accordion();
