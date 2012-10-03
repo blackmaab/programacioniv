@@ -69,4 +69,19 @@ $(document).ready(function(){
         }
     });
      
+     
+    //validacion de formulario de nuevo usuario 
+    $("#btnNewUser:button").button();
+    $("#btnNewUser").click(function(){
+        if($.validarCampos("#frmNewUser")){
+            if($("#txtNewPassword").attr("value")==$("#txtNewPasswordConfirm").attr("value")){
+                $.mensajeInformativo('Contraseña actualizada', 'i');
+                //$.limpiarCampos("#frmNewUser");
+            }else{
+                $.mensajeInformativo('Contraseñas no coiciden', 'e');
+            }
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
 });

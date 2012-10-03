@@ -502,6 +502,15 @@ a:hover {
     text-align: center;
 }
 
+.errorSelect{
+    border: #636161 solid 1px;
+    background: #FAC7C7;
+}
+
+.defaultSelect{
+    border: #2B546E solid 1px;
+    color: #0969A9;
+}
 .defaultText{
     border: #2B546E solid 1px;
     color: #0969A9;
