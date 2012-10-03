@@ -110,7 +110,20 @@ jQuery.validarTecla=function(event,caja,opc){
                 $(caja).attr('value',$(caja).attr('value')+'-');
             }
             //			alert($(caja).attr('value').length);
-            break;						
+            break;
+            
+        case "dinero":
+            patron=/[0-9.]{1}/;
+            if($(caja).attr('value').length==0){
+                patron=/[1-9]{1}/;								
+            }else{
+                var punto=$(caja).attr('value').split('.');
+                if(punto[1]){                    
+                    return false;
+                }
+            //return false;
+            }
+            break;
     }//switch
     //alert(String.fromCharCode(tecla));		
     return patron.test(convertirTecla);

@@ -58,7 +58,7 @@
                     </select>
                 </td>
             </tr>
-
+<!--
             <tr class="rowInstitucion">
                 <td>Nombre de Instituci&oacute;n | Empresa:</td>
                 <td>
@@ -78,7 +78,7 @@
                     <input type="text" name="txtNewApellidos" id="txtNewApellidos" class="defaultText" title="Campo Requerido">
                 </td>
             </tr>
-
+-->
 
             <tr>
                 <td colspan="2" align="right">

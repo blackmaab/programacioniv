@@ -14,9 +14,9 @@
                 </select></td>
         </tr>
         <tr>
-            <td>Nombre de institución:</td>
+            <td>Carrera:</td>
             <td>
-                <input type="text" name="txtDescripcionCarrera" id="txtDescripcionInst" title="Campo Requerido" class="defaultText">
+                <input type="text" name="txtDescripcionCarrera" id="txtDescripcionCarrera" title="Campo Requerido" class="defaultText">
             </td>
         </tr>    
         <tr>

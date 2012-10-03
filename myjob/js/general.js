@@ -86,7 +86,7 @@ $(document).ready(function(){
         }
     });
     
-    $("#selNewTipoUser").change(function(){
+    /*$("#selNewTipoUser").change(function(){
         if($(this).attr("value")=='c'){            
             $(".rowInstitucion").show();            
             $(".rowPersona").hide();            
@@ -97,7 +97,7 @@ $(document).ready(function(){
             $(".rowInstitucion").hide();
             $(".rowPersona").hide();
         }
-    });
+    });*/
     
     $('#txtNewNombres').keypress(function(event){
         return $.validarTecla(event,'#txtNewNombres','nombre');
@@ -122,7 +122,7 @@ $(document).ready(function(){
         return $.validarTecla(event,'#txtEstado','nombre');
     });
    
-   //validacion de formulario institucion educativa
+    //validacion de formulario institucion educativa
     $("#btnInstitucion:button").button();
     $("#btnInstitucion").click(function(){
         if($.validarCampos("#frmInstitucion")){
@@ -189,6 +189,7 @@ $(document).ready(function(){
         return $.validarTecla(event,'#txtParentesco','nombre');
     });
    
+   
     //validacion de formulario de publicacion de nuevo anuncio
     $("#btnNewAnuncio:button").button();
     $("#btnNewAnuncio").click(function(){
@@ -203,7 +204,7 @@ $(document).ready(function(){
         return $.validarTecla(event,'#txtNewVacantes','numero');
     });
     $('#txtNewSalarioMinimo').keypress(function(event){
-        return $.validarTecla(event,'#txtNewSalarioMinimo','numero');
+        return $.validarTecla(event,'#txtNewSalarioMinimo','dinero');
     });
     $('#txtNewSalarioMaximo').keypress(function(event){
         return $.validarTecla(event,'#txtNewSalarioMaximo','numero');
@@ -311,11 +312,6 @@ $(document).ready(function(){
     $('#txtExtReLabCu').keypress(function(event){
         return $.validarTecla(event,'#txtExtReLabCu','numero');
     });
-    
-    
-    
-    
-    
     
     
     
