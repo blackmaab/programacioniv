@@ -113,6 +113,7 @@ $(document).ready(function(){
     $("#btnEstado").click(function(){
         if($.validarCampos("#frmEstado")){
             $.mensajeInformativo('Departamento | Estado agregado exitosamente','i');
+            $.limpiarCampos("#frmEstado");
         }else{
             $.mensajeInformativo('Faltan campos por llenar','e');
         }
@@ -120,5 +121,25 @@ $(document).ready(function(){
     $('#txtEstado').keypress(function(event){
         return $.validarTecla(event,'#txtEstado','nombre');
     });
-    
+   
+   
+    //validacion de formulario de publicacion de nuevo anuncio
+    $("#btnNewAnuncio:button").button();
+    $("#btnNewAnuncio").click(function(){
+        if($.validarCampos("#frmNewAnuncio")){
+            $.mensajeInformativo('Anuncio publicado exitosamente','i');
+            $.limpiarCampos("#frmNewAnuncio");
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtNewVacantes').keypress(function(event){
+        return $.validarTecla(event,'#txtNewVacantes','numero');
+    });
+    $('#txtNewSalarioMinimo').keypress(function(event){
+        return $.validarTecla(event,'#txtNewSalarioMinimo','numero');
+    });
+    $('#txtNewSalarioMaximo').keypress(function(event){
+        return $.validarTecla(event,'#txtNewSalarioMaximo','numero');
+    });
 });
