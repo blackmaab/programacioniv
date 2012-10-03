@@ -140,41 +140,59 @@ jQuery.mensajeInformativo=function(mensaje,tipoError){
             titl='Error';
             image='images/advertencia.png';
             w=255;
-            h=150;		
+            h=100;		
             break;
             ;
 		
         case 'i':
-            titl='Exito';
+            titl='Éxito';
             image='images/exito.png';
             w=270;
-            h=150;
+            h=100;
             break;
 		
-        case 'login':
-            titl='Exito';
+        case 'loginAdmin':
+            titl='Éxito';
             image='images/exito.png';
             w=270;
-            h=150;
+            h=100;
+            funcion=function(){
+                window.location='?mod=homeAdministrator';
+            };
+            break;
+            ;
+            
+        case 'loginEmpresa':
+            titl='Éxito';
+            image='images/exito.png';
+            w=270;
+            h=100;
+            funcion=function(){
+                window.location='?mod=homeCompany';
+            };
+            break;
+            ;
+
+        case 'loginUser':
+            titl='Éxito';
+            image='images/exito.png';
+            w=270;
+            h=100;
+            funcion=function(){
+                window.location='?mod=homeUser';
+            };
+            break;
+            ;
+        case 'logout':
+            titl='Información';
+            image='images/informacion.png';
+            w=270;
+            h=100;
             funcion=function(){
                 window.location='?mod=home';
             };
             break;
             ;
-
-        case 'logout':
-            titl='Error';
-            image='images/advertencia.png';
-            w=270;
-            h=150;
-            funcion=function(){
-                window.location='?mod=admin';
-            };
-            break;
-            ;
-    }
-    if(tipoError){
-	
     }
 	
     $('#divMensaje')
@@ -186,23 +204,27 @@ jQuery.mensajeInformativo=function(mensaje,tipoError){
         width:w,
         height:h,
         resizable:false,
-        show:'clip',
+        show:'bounce',
         modal:false, //pantalla congelada
         hide: {
-            effect: 'drop', 
-            direction: "down"
+            effect: 'explode', 
+            direction: 'down',
+            speed:'slow'
         } ,
         position:['right','top'],
-        buttons:{
+        /*buttons:{
             "Ok":function(){
                 $(this).dialog("close");
                 funcion();
             }
-        },
+        },*/
         close:function(){
             funcion();
         }
-    });			
+    });
+        
+    setTimeout('$("#divMensaje").dialog("close");', 5000);
+        
 }
 
 

@@ -6,14 +6,14 @@
 
 
         <link href="css/letters.css" rel="stylesheet" type="text/css" media="screen">            
-        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="css/tipsy.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="css/jquery-ui-1.7.3.custom.css" rel="stylesheet" type="text/css" media="screen" />
-        <script type="text/javascript" src="js/jquery-1.6.1.js"></script>
-        <script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
-        <script type="text/javascript" src="js/tipsy.js"></script>
-        <script type="text/javascript" src="js/start_validate.js"></script>
-        <script type="text/javascript" src="js/general.js"></script>
+            <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+            <link href="css/tipsy.css" rel="stylesheet" type="text/css" media="screen" />
+            <link href="css/jquery-ui-1.7.3.custom.css" rel="stylesheet" type="text/css" media="screen" />
+            <script type="text/javascript" src="js/jquery-1.6.1.js"></script>
+            <script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+            <script type="text/javascript" src="js/tipsy.js"></script>
+            <script type="text/javascript" src="js/start_validate.js"></script>
+            <script type="text/javascript" src="js/general.js"></script>
     </head>
 
     <body>
@@ -27,8 +27,8 @@
                         <ul>
                             <li class="current_page_item"><a href="?mod=home">Inicio</a></li>
                             <li><a href="?mod=myAccount">Mi Cuenta</a></li>
-                            <li><a href="#">Trabajos</a></li>
-                            <li><a href="#">Empresa</a></li>
+                            <li><a href="?mod=home">Trabajos</a></li>
+                            <li><a href="?mod=viewCompanies">Empresas</a></li>
                             <!--<li><a href="#">Contact</a></li>-->
                         </ul>
                     </div>
@@ -65,7 +65,7 @@
                         <li>
                             <h2>Categorias</h2>
                             <ul>
-                                <li><a href="#">Administraci&oacute;</a></li>
+                                <li><a href="#">Administraci&oacute;n</a></li>
                                 <li><a href="#">Bancos | Finanzas</a></li>
                                 <li><a href="#">Inform&aacute;tica</a></li>
                                 <li><a href="#">Publicidad</a></li>
@@ -79,7 +79,7 @@
                             <ul>
                                 <li><a href="#">Almacenes Crecer</a></li>
                                 <li><a href="#">Claro</a></li>
-                                <li><a href="#">Oracle/a></li>
+                                <li><a href="#">Oracle</a></li>
                                 <li><a href="#">Didea</a></li>
                                 <li><a href="#">Taca</a></li>
                                 <li><a href="#">Constructora Roble</a></li>

@@ -2,10 +2,13 @@
 
 define('MODULO_DEFECTO', 'home');
 define('LAYOUT_DEFECTO', 'layout_default.php');
+define('LAYOUT_ADMINISTRATOR', 'layout_administrator.php');
+define('LAYOUT_COMPANY', 'layout_company.php');
 define('MODULO_PATH', realpath('modules'));
 define('LAYOUT_PATH', realpath('layouts'));
 
 
+/* MODULO POR DEFECTO */
 $conf['home'] = array(
     'archivo' => 'pages/home.php',
     'layout' => LAYOUT_DEFECTO
@@ -15,6 +18,37 @@ $conf['home'] = array(
 $conf['myAccount'] = array(
     'archivo' => 'pages/frmUsuario.php',
     'layout' => LAYOUT_DEFECTO
+);
+
+$conf['viewCompanies'] = array(
+    'archivo' => 'pages/viewCompanies.php',
+    'layout' => LAYOUT_DEFECTO
+);
+
+/* MODULO DE ADMINISTRADOR */
+$conf['homeAdministrator'] = array(
+    'archivo' => 'pages/home_admin.php',
+    'layout' => LAYOUT_ADMINISTRATOR
+);
+$conf['catalogAdmin'] = array(
+    'archivo' => 'pages/catalogos_admin.php',
+    'layout' => LAYOUT_ADMINISTRATOR
+);
+$conf['viewAccountAdmin'] = array(
+    'archivo' => 'pages/updateAccount.php',
+    'layout' => LAYOUT_ADMINISTRATOR
+);
+
+
+/* MODULO DE COMPAÑIA / EMPRESA */
+$conf['homeCompany'] = array(
+    'archivo' => 'pages/homeCompany.php',
+    'layout' => LAYOUT_ADMINISTRATOR
+);
+
+$conf['viewAccountCompany'] = array(
+    'archivo' => 'pages/updateAccount.php',
+    'layout' => LAYOUT_ADMINISTRATOR
 );
 
 /* ERROR AL NO ENCONTRAR LA PÁGINA */
