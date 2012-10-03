@@ -122,6 +122,72 @@ $(document).ready(function(){
         return $.validarTecla(event,'#txtEstado','nombre');
     });
    
+   //validacion de formulario institucion educativa
+    $("#btnInstitucion:button").button();
+    $("#btnInstitucion").click(function(){
+        if($.validarCampos("#frmInstitucion")){
+            $.mensajeInformativo('Institución agregada exitosamente','i');
+            $.limpiarCampos("#frmInstitucion");
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtDescripcionInst').keypress(function(event){
+        return $.validarTecla(event,'#txtDescripcionInst','nombre');
+    });
+    //validacion de formulario carrera
+    $("#btnCarrera:button").button();
+    $("#btnCarrera").click(function(){
+        if($.validarCampos("#frmCarrera")){
+            $.mensajeInformativo('Carrera agregada exitosamente','i');
+            $.limpiarCampos("#frmCarrera");
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtDescripcionCarrera').keypress(function(event){
+        return $.validarTecla(event,'#txtDescripcionCarrera','nombre');
+    });
+    //validacion de Nivel de Estudio
+    $("#btnNivelEstudio:button").button();
+    $("#btnNivelEstudio").click(function(){
+        if($.validarCampos("#frmNivelEstudio")){
+            $.mensajeInformativo('Nivel Estudio agregado exitosamente','i');
+            $.limpiarCampos("#frmNivelEstudio");
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtNivelEstudio').keypress(function(event){
+        return $.validarTecla(event,'#txtNivelEstudio','nombre');
+    });
+    
+    //validacion de Tipo de Documento
+    $("#btnTipoDocumento:button").button();
+    $("#btnTipoDocumento").click(function(){
+        if($.validarCampos("#frmTipoDocumento")){
+            $.mensajeInformativo('Tipo de documento agregado exitosamente','i');
+            $.limpiarCampos("#frmTipoDocumento");
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtTipoDocumento').keypress(function(event){
+        return $.validarTecla(event,'#txtTipoDocumento','nombre');
+    });
+    //validacion de Parentesco
+    $("#btnParentesco:button").button();
+    $("#btnParentesco").click(function(){
+        if($.validarCampos("#frmParentesco")){
+            $.mensajeInformativo('Parentesco agregado exitosamente','i');
+            $.limpiarCampos("#frmParentesco");
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtParentesco').keypress(function(event){
+        return $.validarTecla(event,'#txtParentesco','nombre');
+    });
    
     //validacion de formulario de publicacion de nuevo anuncio
     $("#btnNewAnuncio:button").button();
