@@ -142,4 +142,115 @@ $(document).ready(function(){
     $('#txtNewSalarioMaximo').keypress(function(event){
         return $.validarTecla(event,'#txtNewSalarioMaximo','numero');
     });
+    
+    //validacion de formulario curriculum
+    $("#btnNewCurriculum:button").button();
+    $("#btnNewCurriculum").click(function(){
+        var frm1=$.validarCampos("#frmEstudios");
+        var frm2=$.validarCampos("#frmDatosPersonales");
+        var frm3=$.validarCampos("#frmReferenciaPersonal");
+        if(frm1==true && frm2==true && frm3==true){            
+            $.mensajeInformativo('Curriculum creado exitosamente','i');
+            $.limpiarCampos("#frmDatosPersonales");
+            $.limpiarCampos("#frmEstudios");
+            $.limpiarCampos("#frmExperenciaLaboral");
+            $.limpiarCampos("#frmCapacitaciones");
+            $.limpiarCampos("#frmDiplomas");
+            $.limpiarCampos("#frmReferenciaPersonal");
+            $.limpiarCampos("#frmReferenciaLaboral");
+                       
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    
+    
+    $('#txtNewNombresCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewNombresCu','nombre');
+    });
+    $('#txtNewApellidosCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewApellidosCu','nombre');
+    });
+    
+    $( "#txtNewFechaNacimientoCu" ).datepicker();
+            
+    $('#txtNewNoDocCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewNoDocCu','numero');
+    });
+    
+    $('#txtNewTelefonoCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewTelefonoCu','telefono');
+    });
+    
+    $('#txtNewMovilCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewMovilCu','telefono');
+    });
+    
+    $('#txtNewOficinaCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewOficinaCu','telefono');
+    });
+    
+    $('#txtNewExtCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewExtCu','numero');
+    });
+    
+    $('#txtNewEmailCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewEmailCu','email');
+    });
+    
+    $('#txtNewAnioIniCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewAnioIniCu','anio');
+    });
+    
+    $('#txtNewAnioFinCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewAnioFinCu','anio');
+    });
+    
+    $('#txtNewJefeCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewJefeCu','nombre');
+    });
+    
+    $( "#txtNewPeriodoIniCu" ).datepicker();
+    
+    $( "#txtNewPeriodoFinCu" ).datepicker();
+    
+    $('#txtNewTelefonoCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewTelefonoCu','telefono');
+    });
+    
+    $('#txtNewExtJefeCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewExtJefeCu','numero');
+    });
+    
+    $('#txtNewAnioCapCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewAnioCapCu','anio');
+    });
+    
+    $('#txtNewRePeCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewRePeCu','nombre');
+    });
+    
+    $('#txtNewTePeCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNewTePeCu','telefono');
+    });
+    
+    $('#txtNombreReLabCu').keypress(function(event){
+        return $.validarTecla(event,'#txtNombreReLabCu','nombre');
+    });
+    
+    $('#txtTelReLabCu').keypress(function(event){
+        return $.validarTecla(event,'#txtTelReLabCu','telefono');
+    });
+    
+    $('#txtExtReLabCu').keypress(function(event){
+        return $.validarTecla(event,'#txtExtReLabCu','numero');
+    });
+    
+    
+    
+    
+    
+    
+    
+    
 });

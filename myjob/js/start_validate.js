@@ -77,6 +77,17 @@ jQuery.validarTecla=function(event,caja,opc){
         case "numero":
             patron=/^[0-9]{1}/;
             break;
+        case "anio":
+            patron=/^[0-9]{1}/;
+            //verificacion que el primer numero sea 1 u 2
+            if($(caja).attr('value').length==0){
+                patron=/[12]{1}/;								
+            }else if($(caja).attr('value').length<=3){
+                patron=/[0-9]{1}/;
+            }else{
+                return false;
+            }
+            break;
         case "texto":
             patron=/^[0-9A-Za-zñÑáéíóúÁÉÍÓÚ\s:;,."¿?!¡ ]{1}/;
             break;	

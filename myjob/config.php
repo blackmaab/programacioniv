@@ -4,6 +4,7 @@ define('MODULO_DEFECTO', 'home');
 define('LAYOUT_DEFECTO', 'layout_default.php');
 define('LAYOUT_ADMINISTRATOR', 'layout_administrator.php');
 define('LAYOUT_COMPANY', 'layout_company.php');
+define('LAYOUT_USER', 'layout_user.php');
 define('MODULO_PATH', realpath('modules'));
 define('LAYOUT_PATH', realpath('layouts'));
 
@@ -40,9 +41,9 @@ $conf['viewAccountAdmin'] = array(
 );
 
 
-/* MODULO DE COMPAÑIA / EMPRESA */
+/* MODULO DE COMPAÑIA | EMPRESA */
 $conf['homeCompany'] = array(
-    'archivo' => 'pages/homeCompany.php',
+    'archivo' => 'pages/home_Company.php',
     'layout' => LAYOUT_COMPANY
 );
 
@@ -54,6 +55,22 @@ $conf['job'] = array(
 $conf['viewAccountCompany'] = array(
     'archivo' => 'pages/updateAccount.php',
     'layout' => LAYOUT_COMPANY
+);
+
+/* MODULO DE USUARIO | PERSONA */
+$conf['homeUser'] = array(
+    'archivo' => 'pages/home_User.php',
+    'layout' => LAYOUT_USER
+);
+
+$conf['newCurriculum'] = array(
+    'archivo' => 'pages/frmCurriculum_user.php',
+    'layout' => LAYOUT_USER
+);
+
+$conf['viewAccountUser'] = array(
+    'archivo' => 'pages/updateAccount.php',
+    'layout' => LAYOUT_USER
 );
 
 /* ERROR AL NO ENCONTRAR LA PÁGINA */
