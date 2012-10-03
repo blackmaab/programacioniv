@@ -122,18 +122,60 @@ $(document).ready(function(){
         return $.validarTecla(event,'#txtEstado','nombre');
     });
    
-   //validacion de formulario institucion educativa
-    $("#btnInstitucion:button").button();
-    $("#btnInstitucion").click(function(){
-        if($.validarCampos("#frmInstitucion")){
-            $.mensajeInformativo('Institución agregada exitosamente','i');
-            $.limpiarCampos("#frmInstitucion");
+   //validacion de formulario equipo herramientas
+    $("#btnEquipo:button").button();
+    $("#btnEquipo").click(function(){
+        if($.validarCampos("#frmTipoEquipo")){
+            $.mensajeInformativo('Tipo de Equipos Herramientas agregada exitosamente','i');
+            $.limpiarCampos("#frmTipoEquipo");
         }else{
             $.mensajeInformativo('Faltan campos por llenar','e');
         }
     });
-    $('#txtDescripcionInst').keypress(function(event){
-        return $.validarTecla(event,'#txtDescripcionInst','nombre');
+    $('#txtDescripcionEquipo').keypress(function(event){
+        return $.validarTecla(event,'#txtDescripcionEquipo','nombre');
+    });
+    
+    //validacion de formulario equipo herramientas
+    $("#btnEH:button").button();
+    $("#btnEH").click(function(){
+        if($.validarCampos("#frmEquipo")){
+            $.mensajeInformativo('Tipo de Equipos Herramientas agregada exitosamente','i');
+            $.limpiarCampos("#frmEquipo");
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtDescripcionEH').keypress(function(event){
+        return $.validarTecla(event,'#txtDescripcionEH','nombre');
+    });
+    
+    //validacion de formulario equipo herramientas
+    $("#btnEH:button").button();
+    $("#btnEH").click(function(){
+        if($.validarCampos("#frmEquipo")){
+            $.mensajeInformativo('Equipo o Herramienta agregada exitosamente','i');
+            $.limpiarCampos("#frmEquipo");
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtDescripcionEH').keypress(function(event){
+        return $.validarTecla(event,'#txtDescripcionEH','nombre');
+    });
+    
+    //validacion de formulario institucion educativa
+    $("#btnArea:button").button();
+    $("#btnArea").click(function(){
+        if($.validarCampos("#frmAreaTrabajo")){
+            $.mensajeInformativo('Area de empleo agregada exitosamente','i');
+            $.limpiarCampos("#frmAreaTrabajo");
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtDescripcionArea').keypress(function(event){
+        return $.validarTecla(event,'#txtDescripcionArea','nombre');
     });
     //validacion de formulario carrera
     $("#btnCarrera:button").button();
@@ -148,6 +190,21 @@ $(document).ready(function(){
     $('#txtDescripcionCarrera').keypress(function(event){
         return $.validarTecla(event,'#txtDescripcionCarrera','nombre');
     });
+    
+    //validacion de formulario carrera
+    $("#btnTipoEmpleo:button").button();
+    $("#btnTipoEmpleo").click(function(){
+        if($.validarCampos("#frmTipoEmpleo")){
+            $.mensajeInformativo('Tipo de Empleo agregado exitosamente','i');
+            $.limpiarCampos("#frmTipoEmpleo");
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtTipoEmpleo').keypress(function(event){
+        return $.validarTecla(event,'#txtTipoEmpleo','nombre');
+    });
+    
     //validacion de Nivel de Estudio
     $("#btnNivelEstudio:button").button();
     $("#btnNivelEstudio").click(function(){
