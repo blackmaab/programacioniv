@@ -74,14 +74,36 @@ $(document).ready(function(){
     $("#btnNewUser:button").button();
     $("#btnNewUser").click(function(){
         if($.validarCampos("#frmNewUser")){
+                        
             if($("#txtNewPassword").attr("value")==$("#txtNewPasswordConfirm").attr("value")){
-                $.mensajeInformativo('Contraseña actualizada', 'i');
-                //$.limpiarCampos("#frmNewUser");
+                $.mensajeInformativo('Cuenta creada exitosamente', 'i');
+            //$.limpiarCampos("#frmNewUser");
             }else{
                 $.mensajeInformativo('Contraseñas no coiciden', 'e');
             }
         }else{
             $.mensajeInformativo('Faltan campos por llenar','e');
         }
+    });
+    
+    $("#selNewTipoUser").change(function(){
+        if($(this).attr("value")=='c'){            
+            $(".rowInstitucion").show();            
+            $(".rowPersona").hide();            
+        }else if($(this).attr("value")=='u'){
+            $(".rowInstitucion").hide();
+            $(".rowPersona").show();
+        }else{
+            $(".rowInstitucion").hide();
+            $(".rowPersona").hide();
+        }
+    });
+    
+    $('#txtNewNombres').keypress(function(event){
+        return $.validarTecla(event,'#txtNewNombres','nombre');
+    });
+    
+    $('#txtNewApellidos').keypress(function(event){
+        return $.validarTecla(event,'#txtNewApellidos','nombre');
     });
 });

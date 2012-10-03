@@ -43,12 +43,17 @@ $conf['viewAccountAdmin'] = array(
 /* MODULO DE COMPAÑIA / EMPRESA */
 $conf['homeCompany'] = array(
     'archivo' => 'pages/homeCompany.php',
-    'layout' => LAYOUT_ADMINISTRATOR
+    'layout' => LAYOUT_COMPANY
+);
+
+$conf['job'] = array(
+    'archivo' => 'pages/job_company.php',
+    'layout' => LAYOUT_COMPANY
 );
 
 $conf['viewAccountCompany'] = array(
     'archivo' => 'pages/updateAccount.php',
-    'layout' => LAYOUT_ADMINISTRATOR
+    'layout' => LAYOUT_COMPANY
 );
 
 /* ERROR AL NO ENCONTRAR LA PÁGINA */

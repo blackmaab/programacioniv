@@ -26,9 +26,8 @@
     <br>
     <hr>
     <br>
-    <br>
-    <h1>HEBER</h1>  
-    <h1>Registrate HEBER</h1>
+    <br>      
+    <h1>Registrate</h1>
     <frm name="frmNewUser" id="frmNewUser" action="#">
         <table>
             <tr>
@@ -52,15 +51,35 @@
             <tr>
                 <td>Tipo de usuario:</td>
                 <td>
-                    <select name="selTipoUser" id="selTipoUser" title="Campo Requerido" class="defaultSelect">
+                    <select name="selNewTipoUser" id="selNewTipoUser" title="Campo Requerido" class="defaultSelect">
                         <option value="-">--Elige--</option>
                         <option value="c">Instituci&oacute;n | Empresa</option>
                         <option value="u">Persona</option>
                     </select>
                 </td>
             </tr>
-            
-            
+
+            <tr class="rowInstitucion">
+                <td>Nombre de Instituci&oacute;n | Empresa:</td>
+                <td>
+                    <input type="text" name="txtNewEmpresa" id="txtNewEmpresa" class="defaultText" title="Campo Requerido">
+                </td>
+            </tr>
+
+            <tr class="rowPersona">
+                <td>Nombres:</td>
+                <td>
+                    <input type="text" name="txtNewNombres" id="txtNewNombres" class="defaultText" title="Campo Requerido">
+                </td>                
+            </tr>
+            <tr class="rowPersona">
+                <td>Apellidos:</td>
+                <td>
+                    <input type="text" name="txtNewApellidos" id="txtNewApellidos" class="defaultText" title="Campo Requerido">
+                </td>
+            </tr>
+
+
             <tr>
                 <td colspan="2" align="right">
                     <input type="button" name="btnNewUser" id="btnNewUser" value="Registrar">

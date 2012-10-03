@@ -50,7 +50,7 @@ jQuery.validarCampos=function(nameForm){
             $(this).addClass('errorSelect');
             contadorErrores++;
         }else{
-            $(this).addClass('defaultText');
+            $(this).addClass('defaultSelect');
         }
     });
 		
