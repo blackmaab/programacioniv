@@ -10,11 +10,11 @@
         </div>
         <h3><a href="#">Intituci&oacute;n Educativa</a></h3>
         <div>
-          <!--Formulario-->
+          <?php include("modules/pages/frmInstitucion_admin.php");?>
         </div>
         <h3><a href="#">Carreras Universitarias</a></h3>
         <div>
-           <!--Formulario-->
+           <?php include("modules/pages/frmCarrera_admin.php");?>
         </div>
         <h3><a href="#">Estados de Carrera Universitaria</a></h3>
         <div>
@@ -22,21 +22,21 @@
         </div>
         <h3><a href="#">Nivel de Estudio</a></h3>
         <div>
-           <!--Formulario-->
+           <?php include("modules/pages/frmNivelEstudio_admin.php");?>
         </div>
         <h3><a href="#">Tipo de Documento</a></h3>
         <div>
-           <!--Formulario-->
+           <?php include("modules/pages/frmTipoDocumento_admin.php");?>
         </div>
         <h3><a href="#">Parentesco</a></h3>
         <div>
-           <!--Formulario-->
-        </div>
-        <h3><a href="#">Herramientas / Equipos</a></h3>
-        <div>
-           <!--Formulario-->
+           <?php include("modules/pages/frmParentesco_admin.php");?>
         </div>
         <h3><a href="#">Tipo de Equipo / Herramienta</a></h3>
+        <div>
+           <?php include("modules/pages/frmTipoEquipoHerramientas_admin.php");?>
+        </div>
+        <h3><a href="#">Herramientas / Equipos</a></h3>
         <div>
            <!--Formulario-->
         </div>
