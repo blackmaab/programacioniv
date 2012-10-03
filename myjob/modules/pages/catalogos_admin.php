@@ -6,7 +6,7 @@
         </div>
         <h3><a href="#">Departamento / Estado</a></h3>
         <div>
-            <!--Formulario-->
+            <?php include("modules/pages/frmEstado_admin.php");?>
         </div>
         <h3><a href="#">Intituci&oacute;n Educativa</a></h3>
         <div>
