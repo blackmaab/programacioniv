@@ -106,4 +106,19 @@ $(document).ready(function(){
     $('#txtNewApellidos').keypress(function(event){
         return $.validarTecla(event,'#txtNewApellidos','nombre');
     });
+    
+    
+    //validacion de formulario departamento | estado
+    $("#btnEstado:button").button();
+    $("#btnEstado").click(function(){
+        if($.validarCampos("#frmEstado")){
+            $.mensajeInformativo('Departamento | Estado agregado exitosamente','i');
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtEstado').keypress(function(event){
+        return $.validarTecla(event,'#txtEstado','nombre');
+    });
+    
 });
