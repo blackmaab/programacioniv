@@ -417,4 +417,15 @@ $(document).ready(function(){
     $('#txtEmailEmpresa').keypress(function(event){
         return $.validarTecla(event,'#txtEmailEmpresa','email');
     });
+    
+    //validacion del formulario tipo de equipo
+    $("#btnEquipo:button").button();
+    $("#btnEquipo").click(function(){        
+        if($.validarCampos("#frmTipoEquipo")){            
+            $.mensajeInformativo('Tipo Equipo | Herramienta agregado exitosamente','i');
+            $.limpiarCampos("#frmTipoEquipo");                                  
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
 });
