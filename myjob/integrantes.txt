@@ -1,0 +1,5 @@
+	ALUMNOS				CARNE
+--------------------------------	-------
+Mario Alexander Alvarado Bernal 	AB100411
+Heber Mauricio Lara Peña 		LP101211
+Pedro Miguel Sanchez Diaz 		SD100411
