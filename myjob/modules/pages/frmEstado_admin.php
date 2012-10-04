@@ -3,7 +3,7 @@
         <tr>
             <td>Pais:</td>
             <td>
-                <select name="selPaisEstado" id="selPaisEstado" class="defaultSelect">
+                <select name="selPaisEstado" id="selPaisEstado" class="defaultSelect" title="Campo Requerido" alt="*">
                     <option value="-">--Seleccione--</option>
                     <option value="1">El Salvador</option>
                     <option value="2">Guatemala</option>
@@ -17,7 +17,7 @@
         <tr>
             <td>Nombre de nuevo estado:</td>
             <td>
-                <input type="text" name="txtEstado" id="txtEstado" title="Campo Requerido" class="defaultText">
+                <input type="text" name="txtEstado" id="txtEstado" title="Campo Requerido" class="defaultText" alt="*">
             </td>
         </tr>    
         <tr>

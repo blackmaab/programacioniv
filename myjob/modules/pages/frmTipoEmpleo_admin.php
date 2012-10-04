@@ -2,7 +2,7 @@
     <table>
         <tr>
             <td>Area de Empleo:</td>
-            <td><select name="selArea" id="selArea" class="defaultSelect">
+            <td><select name="selArea" id="selArea" class="defaultSelect" title="Campo Requerido" alt="*">
                     <option value="-">--Seleccione--</option>
                     <option value="1">Informatica</option>
                     <option value="2">Electronica</option>
@@ -13,7 +13,7 @@
         <tr>
             <td>Tipo de empleo:</td>
             <td>
-                <input type="text" name="txtTipoEmpleo" id="txtTipoEmpleo" title="Campo Requerido" class="defaultText">
+                <input type="text" name="txtTipoEmpleo" id="txtTipoEmpleo" title="Campo Requerido" class="defaultText" alt="*">
             </td>
         </tr>    
         <tr>

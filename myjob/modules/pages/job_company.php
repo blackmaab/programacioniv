@@ -5,13 +5,13 @@
             <tr>
                 <td>Titulo:</td>
                 <td>
-                    <input type="text" name="txtNewTitulo" id="txtNewTitulo" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewTitulo" id="txtNewTitulo" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Area empleo:</td>
                 <td>
-                    <select name="selNewAreaEmpleo" id="selNewAreaEmpleo" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewAreaEmpleo" id="selNewAreaEmpleo" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-">--Seleccione--</option>
                         <option value="1">Administraci&oacute;n</option>
                         <option value="2">Almacenamiento</option>
@@ -25,7 +25,7 @@
             <tr>
                 <td>Cargo:</td>
                 <td>
-                    <select name="selNewCargoEmpleo" id="selNewCargoEmpleo" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewCargoEmpleo" id="selNewCargoEmpleo" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-">--Seleccione--</option>
                         <option value="1">Administrador</option>
                         <option value="2">Gerente</option>
@@ -39,49 +39,49 @@
             <tr>
                 <td>Vacantes:</td>
                 <td>
-                    <input type="text" name="txtNewVacantes" id="txtNewVacantes" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewVacantes" id="txtNewVacantes" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Tipo de Contrataci&oacute;n:</td>
                 <td>
-                    <input type="text" name="txtNewContratacion" id="txtNewContratacion" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewContratacion" id="txtNewContratacion" class="defaultText" title="Campo Requerido" alt="*"> 
                 </td>
             </tr>
             <tr>
                 <td>Nivel de Experiencia:</td>
                 <td>
-                    <input type="text" name="txtNewNivelExperiencia" id="txtNewNivelExperiencia" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewNivelExperiencia" id="txtNewNivelExperiencia" class="defaultText" title="Campo Requerido" alt="*">
                 </td>                    
             </tr>
             <tr>
                 <td>Genero:</td>
                 <td>
-                    <input type="text" name="txtNewGenero" id="txtNewGenero" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewGenero" id="txtNewGenero" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Rango de Edad:</td>
                 <td>
-                    <input type="text" name="txtNewRangoEdad" id="txtNewRangoEdad" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewRangoEdad" id="txtNewRangoEdad" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Salario Minimo:</td>
                 <td>
-                    <input type="text" name="txtNewSalarioMinimo" id="txtNewSalarioMinimo" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewSalarioMinimo" id="txtNewSalarioMinimo" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Salario M&aacute;ximo:</td>
                 <td>
-                    <input type="text" name="txtNewSalarioMaximo" id="txtNewSalarioMaximo" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewSalarioMaximo" id="txtNewSalarioMaximo" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Pais:</td>
                 <td>
-                    <select name="selNewPais" id="selNewPais" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewPais" id="selNewPais" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-">--Seleccione--</option>
                         <option value="1">El Salvador</option>
                         <option value="2">Honduras</option>
@@ -94,7 +94,7 @@
             <tr>
                 <td>Departamento | Estado:</td>
                 <td>
-                    <select name="selNewDep" id="selNewDep" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewDep" id="selNewDep" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-">--Seleccione--</option>
                         <option value="1">San Salvador</option>
                         <option value="2">Managua</option>
@@ -107,13 +107,13 @@
             <tr>
                 <td>Requisitos:</td>
                 <td>
-                    <textarea cols="16" rows="6" name="txtNewRequisitos" id="txtNewRequisitos" class="defaultText" title="Campo Requerido"></textarea>
+                    <textarea cols="16" rows="6" name="txtNewRequisitos" id="txtNewRequisitos" class="defaultText" title="Campo Requerido" alt="*"></textarea>
                 </td>
             </tr>
             <tr>
                 <td>Descripci&oacute; del Empleo:</td>
                 <td>
-                    <textarea cols="16" rows="6" name="txtNewEmpleo" id="txtNewEmpleo" class="defaultText" title="Campo Requerido"></textarea>
+                    <textarea cols="16" rows="6" name="txtNewEmpleo" id="txtNewEmpleo" class="defaultText" title="Campo Requerido" alt="*"></textarea>
                 </td>
             </tr>
             <tr>

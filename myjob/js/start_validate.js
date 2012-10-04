@@ -1,13 +1,15 @@
 //funcion para validacion de campos
 jQuery.validarCampos=function(nameForm){
     var contadorErrores=0;
-		
+    var required;	
     //verificacion de type="text"
     $(nameForm + ' input:text').each(function(index){
         //verificacion si el campo esta vacio
         $(this).removeClass();
-        if($(this).attr('value')=="" || $(this).attr('value')==null){
-            $(this).attr('title','Campo requerido');
+        
+        required= $(this).attr('alt');
+        
+        if(($(this).attr('value')=="" || $(this).attr('value')==null) && required=="*"){            
             $(this).addClass('errorText');
             contadorErrores++;
         }else{
@@ -19,8 +21,8 @@ jQuery.validarCampos=function(nameForm){
     $(nameForm +' input:password').each(function(index){
         //verifiacion si el campo esta vacio
         $(this).removeClass();
-        if($(this).attr('value')=="" || $(this).attr('value')==null){
-            $(this).attr('title','Campo requerido');
+        required= $(this).attr('alt');
+        if(($(this).attr('value')=="" || $(this).attr('value')==null) && required=="*"){                        
             $(this).addClass('errorText');
             contadorErrores++;
         }else{
@@ -32,8 +34,8 @@ jQuery.validarCampos=function(nameForm){
     $(nameForm + ' textarea').each(function(index){
         //verificacion si el campo esta vacio
         $(this).removeClass();
-        if($(this).attr('value')=="" || $(this).attr('value')==null){
-            $(this).attr('title','Campo requerido');
+        required= $(this).attr('alt');
+        if(($(this).attr('value')=="" || $(this).attr('value')==null) && required=="*"){                    
             $(this).addClass('errorTextArea');
             contadorErrores++;
         }else{
@@ -45,8 +47,8 @@ jQuery.validarCampos=function(nameForm){
     $(nameForm + ' select').each(function(){
         //verificacion si no se ha seleccionado nada
         $(this).removeClass();
-        if($(this).attr('value')=="-"){
-            $(this).attr('title','Campo requerido');
+        required= $(this).attr('alt');
+        if($(this).attr('value')=="-" && required=="*"){            
             $(this).addClass('errorSelect');
             contadorErrores++;
         }else{

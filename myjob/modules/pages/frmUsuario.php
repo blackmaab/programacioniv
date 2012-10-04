@@ -4,12 +4,12 @@
         <table>
             <tr>
                 <td>Usuario:</td>
-                <td><input type="text" name="txtUsuario" id="txtUsuario" title="Campo Requerido" class="defaultText"></td>
+                <td><input type="text" name="txtUsuario" id="txtUsuario" title="Campo Requerido" alt="*" class="defaultText"></td>
             </tr>
             <tr>
                 <td>Contrase&ntilde;a:</td>
                 <td>
-                    <input type="password" name="txtPassword" id="txtPassword" title="Campo Requerido" class="defaultText">
+                    <input type="password" name="txtPassword" id="txtPassword" title="Campo Requerido" alt="*" class="defaultText">
                 </td>
             </tr>
             <tr>                
@@ -33,25 +33,25 @@
             <tr>
                 <td>Nombre de Usuario:</td>
                 <td>
-                    <input type="text" name="txtNewUser" id="txtNewUser" title="Campo Requerido" class="defaultText">
+                    <input type="text" name="txtNewUser" id="txtNewUser" title="Campo Requerido" alt="*" class="defaultText">
                 </td>
             </tr>
             <tr>
                 <td>Contrase&ntilde;a:</td>
                 <td>
-                    <input type="password" name="txtNewPassword" id="txtNewPassword" title="Campo Requerido" class="defaultText">
+                    <input type="password" name="txtNewPassword" id="txtNewPassword" title="Campo Requerido" alt="*" class="defaultText">
                 </td>                    
             </tr>
             <tr>
                 <td>Confirmaci&oacute;n de Contrase&ntilde;a:</td>
                 <td>
-                    <input type="password" name="txtNewPasswordConfirm" id="txtNewPasswordConfirm" title="Campo Requerido" class="defaultText">
+                    <input type="password" name="txtNewPasswordConfirm" id="txtNewPasswordConfirm" title="Campo Requerido"  alt="*" class="defaultText">
                 </td>
             </tr>
             <tr>
                 <td>Tipo de usuario:</td>
                 <td>
-                    <select name="selNewTipoUser" id="selNewTipoUser" title="Campo Requerido" class="defaultSelect">
+                    <select name="selNewTipoUser" id="selNewTipoUser" title="Campo Requerido" alt="*" class="defaultSelect">
                         <option value="-">--Elige--</option>
                         <option value="c">Instituci&oacute;n | Empresa</option>
                         <option value="u">Persona</option>
