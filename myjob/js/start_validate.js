@@ -109,7 +109,6 @@ jQuery.validarTecla=function(event,caja,opc){
             if($(caja).attr('value').length==4){
                 $(caja).attr('value',$(caja).attr('value')+'-');
             }
-            //			alert($(caja).attr('value').length);
             break;
             
         case "dinero":
@@ -117,15 +116,19 @@ jQuery.validarTecla=function(event,caja,opc){
             if($(caja).attr('value').length==0){
                 patron=/[1-9]{1}/;								
             }else{
-                var punto=$(caja).attr('value').split('.');
-                if(punto[1]){                    
-                    return false;
+                var punto=$(caja).attr('value').split('.');                
+                if(punto[1]!=undefined){
+                    if(punto[1].length>=0 &&punto[1].length<2){                    
+                        patron=/[1-9]{1}/;
+                    }else{
+                        return false;
+                    }
                 }
             //return false;
-            }
+            }            
             break;
     }//switch
-    //alert(String.fromCharCode(tecla));		
+    //alert(String.fromCharCode(tecla));		    
     return patron.test(convertirTecla);
 }//fin de funcion validarTecla
 

@@ -264,7 +264,7 @@ $(document).ready(function(){
         return $.validarTecla(event,'#txtNewSalarioMinimo','dinero');
     });
     $('#txtNewSalarioMaximo').keypress(function(event){
-        return $.validarTecla(event,'#txtNewSalarioMaximo','numero');
+        return $.validarTecla(event,'#txtNewSalarioMaximo','dinero');
     });
     
     //validacion de formulario curriculum
@@ -371,5 +371,22 @@ $(document).ready(function(){
     });
     
     
+    //validacion de datos empresa
+    $("#btnDatosEmpresa:button").button();
+    $("#btnDatosEmpresa").click(function(){        
+        if($.validarCampos("#frmDatosCompany")){            
+            $.mensajeInformativo('Datos actualizados exitosamente','i');
+            $.limpiarCampos("#frmDatosCompany");                                  
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
     
+    $('#txtTelefonoEmpresa').keypress(function(event){
+        return $.validarTecla(event,'#txtTelefonoEmpresa','telefono');
+    });
+    
+    $('#txtEmailEmpresa').keypress(function(event){
+        return $.validarTecla(event,'#txtEmailEmpresa','email');
+    });
 });

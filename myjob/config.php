@@ -53,7 +53,7 @@ $conf['job'] = array(
 );
 
 $conf['viewAccountCompany'] = array(
-    'archivo' => 'pages/updateAccount.php',
+    'archivo' => 'pages/updateAccount_company.php',
     'layout' => LAYOUT_COMPANY
 );
 

@@ -204,7 +204,7 @@
             </tr>
         </table>
     </frm>
-  <hr>
+    <hr>
     <h1>Experiencia Laboral</h1>
     <frm name="frmExperenciaLaboral" id="frmExperenciaLaboral" action="#">
         <table>
@@ -289,6 +289,36 @@
             </tr>
         </table>
     </frm>
+
+    <hr>
+    <h1>Experiencia de Equipo</h1>
+    <frm name="frmNewExperienciaEquipo" id="frmNewExperienciaEquipo" action="#">
+        <table>
+            <tr>
+                <td>Tipo de Equipo:</td>
+                <td>
+                    <select name="selNewTipoEquipo" id="selNewTipoEquipo" class="defaultSelect">                       
+                        <option value="-">--Seleccione--</option>
+                        <option value="1">El&eacute;ctrico</option>
+                        <option value="2">Inform&aacute;tico</option>
+                        <option value="3">Industrial</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Equipo Utilizado:</td>
+                <td>
+                    <select name="selNewEquipo" id="selNewEquipo" class="defaultSelect">                       
+                        <option value="-">--Seleccione--</option>
+                        <option value="1">Computadora</option>
+                        <option value="2">Fresadora</option>
+                        <option value="3">Contometro</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </frm>
+
     <hr>
     <h1>Referencias Personales</h1>
     <frm name="frmReferenciaPersonal" id="frmReferenciaPersonal" action="#">
