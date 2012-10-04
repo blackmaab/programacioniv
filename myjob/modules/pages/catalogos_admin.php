@@ -18,7 +18,7 @@
         </div>
         <h3><a href="#">Estados de Carrera Universitaria</a></h3>
         <div>
-           <!--Formulario-->
+           <?php include("modules/pages/frmEstadoCarrera_admin.php");?>
         </div>
         <h3><a href="#">Nivel de Estudio</a></h3>
         <div>
@@ -48,13 +48,9 @@
         <div>
            <?php include("modules/pages/frmTipoEmpleo_admin.php");?>
         </div>
-        <h3><a href="#">Empresas / Instituciones</a></h3>
-        <div>
-           <!--Formulario-->
-        </div>
         <h3><a href="#">Empresas / Instituciones (Curriculum)</a></h3>
         <div>
-           <!--Formulario-->
+           <?php include("modules/pages/frmEmpresa_admin.php");?>
         </div>
     </div>
 </div>

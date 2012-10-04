@@ -121,6 +121,34 @@ $(document).ready(function(){
     $('#txtEstado').keypress(function(event){
         return $.validarTecla(event,'#txtEstado','nombre');
     });
+    
+    //validacion de formulario Empresa
+    $("#btnEmpresa:button").button();
+    $("#btnEmpresa").click(function(){
+        if($.validarCampos("#frmEmpresa")){
+            $.mensajeInformativo('Empresa agregada exitosamente','i');
+            $.limpiarCampos("#frmEmpresa");
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtDescripcionEmpresa').keypress(function(event){
+        return $.validarTecla(event,'#txtDescripcionEmpresa','nombre');
+    });
+    
+    //validacion de formulario Empresa
+    $("#btnEstadoCarrera:button").button();
+    $("#btnEstadoCarrera").click(function(){
+        if($.validarCampos("#frmEstadoCarrera")){
+            $.mensajeInformativo('Estado Carrera agregado exitosamente','i');
+            $.limpiarCampos("#frmEmpresa");
+        }else{
+            $.mensajeInformativo('Faltan campos por llenar','e');
+        }
+    });
+    $('#txtDescripcionEstadoCarrera').keypress(function(event){
+        return $.validarTecla(event,'#txtDescripcionEstadoCarrera','nombre');
+    });
    
     //validacion de formulario institucion educativa
     $("#btnInstitucion:button").button();
