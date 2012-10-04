@@ -114,12 +114,12 @@ jQuery.validarTecla=function(event,caja,opc){
         case "dinero":
             patron=/[0-9.]{1}/;
             if($(caja).attr('value').length==0){
-                patron=/[1-9]{1}/;								
+                patron=/[0-9]{1}/;								
             }else{
                 var punto=$(caja).attr('value').split('.');                
                 if(punto[1]!=undefined){
                     if(punto[1].length>=0 &&punto[1].length<2){                    
-                        patron=/[1-9]{1}/;
+                        patron=/[0-9]{1}/;
                     }else{
                         return false;
                     }

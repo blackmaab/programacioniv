@@ -6,11 +6,11 @@
 
 
         <link href="css/letters.css" rel="stylesheet" type="text/css" media="screen">            
-            <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-            <link href="css/tipsy.css" rel="stylesheet" type="text/css" media="screen" />
-            <link href="css/jquery-ui-1.7.3.custom.css" rel="stylesheet" type="text/css" media="screen" />
+            <link href="css/style.css" rel="stylesheet" type="text/css"  />
+            <link href="css/tipsy.css" rel="stylesheet" type="text/css" />
+            <link href="css/jquery-ui-1.8.24.custom.css" rel="stylesheet" type="text/css" />
             <script type="text/javascript" src="js/jquery-1.6.1.js"></script>
-            <script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+            <script type="text/javascript" src="js/jquery-ui-1.8.24.custom.min.js"></script>
             <script type="text/javascript" src="js/tipsy.js"></script>
             <script type="text/javascript" src="js/start_validate.js"></script>
             <script type="text/javascript" src="js/general.js"></script>
