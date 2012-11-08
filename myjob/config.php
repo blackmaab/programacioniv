@@ -8,7 +8,6 @@ define('LAYOUT_USER', 'layout_user.php');
 define('MODULO_PATH', realpath('modules'));
 define('LAYOUT_PATH', realpath('layouts'));
 
-
 /* MODULO POR DEFECTO */
 $conf['home'] = array(
     'archivo' => 'pages/home.php',
