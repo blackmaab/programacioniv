@@ -34,6 +34,10 @@ $conf['catalogAdmin'] = array(
     'archivo' => 'pages/catalogos_admin.php',
     'layout' => LAYOUT_ADMINISTRATOR
 );
+$conf['guardarEstado'] = array(
+    'archivo' => 'pages/guardarEstado.php',
+    'layout' => LAYOUT_ADMINISTRATOR
+);
 $conf['viewAccountAdmin'] = array(
     'archivo' => 'pages/updateAccount.php',
     'layout' => LAYOUT_ADMINISTRATOR

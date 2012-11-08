@@ -10,7 +10,7 @@ class ConfigDB{
         var $User_MSSQL;
         var $Password_MSSQL;
         function ConfigDB(){
-                $this->DB_MySQL = "myjob";
+                $this->DB_MySQL = "miempleodb";
                 $this->Server_MySQL = "localhost";
                 $this->User_MySQL = "root";
                 $this->Password_MySQL= "";

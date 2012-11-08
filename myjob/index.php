@@ -1,5 +1,6 @@
 <?php
-
+include_once ('DBManager.class.php'); //Clase de Conexión a las Base de Datos
+include('myjob.class.php');
 include("config.php");
 
 if (!empty($_GET['mod'])) {

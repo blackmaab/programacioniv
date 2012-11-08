@@ -1,16 +1,16 @@
-<frm name="frmEstado" id="frmEstado" action="#">
+<frm name="frmEstado" id="frmEstado" action="?mod=guardarEstado">
     <table>
         <tr>
             <td>Pais:</td>
             <td>
                 <select name="selPaisEstado" id="selPaisEstado" class="defaultSelect" title="Campo Requerido" alt="*">
-                    <option value="-">--Seleccione--</option>
-                    <option value="1">El Salvador</option>
-                    <option value="2">Guatemala</option>
-                    <option value="3">Honduras</option>
-                    <option value="4">Costa Rica</option>
-                    <option value="5">Nicaragua</option>
-                    <option value="6">Panama</option>
+                    <option value='0'>Elija un pais</option>
+                    <?php 
+                    $consulta=$obj->consultar_paises();
+                    while($row=$consulta->fetch(PDO::FETCH_OBJ)){
+                        echo "<option value='".$row->idpais."'>".$row->descripcion."</option>";
+                    }
+                    ?>
                 </select>
             </td>
         </tr>
