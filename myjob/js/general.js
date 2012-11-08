@@ -112,8 +112,19 @@ $(document).ready(function(){
     $("#btnEstado:button").button();
     $("#btnEstado").click(function(){
         if($.validarCampos("#frmEstado")){
-            $.mensajeInformativo('Departamento | Estado agregado exitosamente','i');
-            $.limpiarCampos("#frmEstado");
+            /*$.mensajeInformativo('Departamento | Estado agregado exitosamente','i');
+            $.limpiarCampos("#frmEstado");*/
+            $.post('../modulos/pages/guardarEstado.php',
+            $("#frmEstado").serialize(),
+            function(data){
+                if(data=="true"){
+                    $.mensajeInformativo('Estado | Departamento agregado con exito','i');
+                    $.limpiarCampos("#frmEstado");
+                }else{
+                    $.mensajeInformativo('Hubo un error al guardar el estado. Intente de nuevo.','e');
+                }
+            }
+            );
         }else{
             $.mensajeInformativo('Faltan campos por llenar','e');
         }
@@ -121,6 +132,8 @@ $(document).ready(function(){
     $('#txtEstado').keypress(function(event){
         return $.validarTecla(event,'#txtEstado','nombre');
     });
+     
+    
     
     //validacion de formulario Empresa
     $("#btnEmpresa:button").button();

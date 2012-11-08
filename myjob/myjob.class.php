@@ -36,19 +36,13 @@ class MyJob {
         unset($dbh);
         unset($query);
     }
-    
-	
-	function agregar_noticia($campos) {
+    function guardar_dep_estado($campos) {
         $con = new DBManager();
         $dbh = $con->conectar("mysql");
-        $sql = "INSERT INTO noticia VALUES ('',:Fecha,:Titulo,:Resumen,:Imagen,:FechaProcesamiento,:idUsuario)";
+        $sql = "INSERT INTO depatarmento_estado VALUES ('',:Descripcion,:Pais)";
         $add = $dbh->prepare($sql);
-        $add->bindParam(":Fecha",$campos[0]);
-        $add->bindParam(":Titulo",$campos[1]);
-        $add->bindParam(":Resumen",$campos[2]);
-        $add->bindParam(":Imagen",$campos[3]);
-        $add->bindParam(":FechaProcesamiento",date('Y-m-d H:i:s'));
-        $add->bindParam(":idUsuario",$campos[4]);
+        $add->bindParam(":Pais",$campos[0]);
+        $add->bindParam(":Descripcion",$campos[1]);
         $add->execute();
         if ($add)
            return true;
