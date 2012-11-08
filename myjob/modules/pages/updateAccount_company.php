@@ -5,13 +5,13 @@
             <tr>
                 <td>Contrase&ntilde;a:</td>
                 <td>
-                    <input type="password" name="txtPassword" id="txtPassword" title="Campo Requerido" class="defaultText">
+                    <input type="password" name="txtPassword" id="txtPassword" title="Campo Requerido" class="defaultText" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Confirmar contrase&ntilde;a:</td>
                 <td>
-                    <input type="password" name="txtPasswordConfirm" id="txtPasswordConfirm" title="Campo Requerido" class="defaultText">
+                    <input type="password" name="txtPasswordConfirm" id="txtPasswordConfirm" title="Campo Requerido" class="defaultText" alt="*">
                 </td>
             </tr>
             <tr>                
@@ -28,19 +28,19 @@
             <tr>
                 <td>Nombre de Empresa:</td>
                 <td>
-                    <input type="text" id="txtNombreEmpresa" class="defaultText" title="Campo Requerido">
+                    <input type="text" id="txtNombreEmpresa" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Misi&oacute;n:</td>
                 <td>
-                    <textarea rows="5" cols="16" name="txtMisionEmpresa"  id="txtMisionEmpresa" class="defaultText" title="Campo Requerido"></textarea>
+                    <textarea rows="5" cols="16" name="txtMisionEmpresa"  id="txtMisionEmpresa" class="defaultText" title="Campo Requerido" alt="*"></textarea>
                 </td>
             </tr>
             <tr>
                 <td>Visi&oacute;n:</td>
                 <td>
-                    <textarea rows="5" cols="16" name="txtVisionEmpresa"  id="txtVisionEmpresa" class="defaultText" title="Campo Requerido"></textarea>
+                    <textarea rows="5" cols="16" name="txtVisionEmpresa"  id="txtVisionEmpresa" class="defaultText" title="Campo Requerido" alt="*"></textarea>
                 </td>
             </tr>
             <tr>
@@ -52,7 +52,7 @@
             <tr>
                 <td>Pais:</td>
                 <td>
-                    <select name="selPaisEmpresa" id="selPaisEmpresa" class="defaultSelect" title="Campo Requerido">
+                    <select name="selPaisEmpresa" id="selPaisEmpresa" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-">--Seleccione--</option>
                         <option value="1">El Salvador</option>
                         <option value="2">Guatemala</option>
@@ -66,7 +66,7 @@
             <tr>
                 <td>Departamento | Estado:</td>
                 <td>
-                    <select name="selEstadoEmpresa" id="selEstadoEmpresa" class="defaultSelect" title="Campo Requerido">
+                    <select name="selEstadoEmpresa" id="selEstadoEmpresa" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-">--Seleccione--</option>
                         <option value="1">San Salvador</option>
                         <option value="2">Santa Ana</option>
@@ -88,25 +88,25 @@
             <tr>
                 <td>Direcci&oacute;n:</td>
                 <td>
-                    <textarea rows="5" cols="16" name="txtDireccionEmpresa"  id="txtDirecionEmpresa" class="defaultText" title="Campo Requerido"></textarea>
+                    <textarea rows="5" cols="16" name="txtDireccionEmpresa"  id="txtDirecionEmpresa" class="defaultText" title="Campo Requerido" alt="*"></textarea>
                 </td>
             </tr>
             <tr>
                 <td>Tel&eacute;fono:</td>
                 <td>
-                    <input type="text" id="txtTelefonoEmpresa" class="defaultText" title="Campo Requerido">
+                    <input type="text" id="txtTelefonoEmpresa" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Correo Electronico:</td>
                 <td>
-                    <input type="text" id="txtEmailEmpresa" class="defaultText" title="Campo Requerido">
+                    <input type="text" id="txtEmailEmpresa" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>P&aacute;gina Web:</td>
                 <td>
-                    <input type="text" id="txtPaginaEmpresa" class="defaultText" title="Campo Requerido">
+                    <input type="text" id="txtPaginaEmpresa" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
              <tr>                 

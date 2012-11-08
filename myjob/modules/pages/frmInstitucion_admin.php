@@ -3,7 +3,7 @@
         <tr>
             <td>Pais:</td>
             <td>
-                <select name="selPaisInstitucion" id="selPaisInstitucion" class="defaultSelect">
+                <select name="selPaisInstitucion" id="selPaisInstitucion" class="defaultSelect" title="Campo Requerido" alt="*">
                     <option value="-">--Seleccione--</option>
                     <option value="1">El Salvador</option>
                     <option value="2">Guatemala</option>
@@ -17,7 +17,7 @@
         <tr>
             <td>Estado | Departamento:</td>
             <td>
-                <select name="selEstadoInstitucion" id="selEstadoInstitucion" class="defaultSelect">
+                <select name="selEstadoInstitucion" id="selEstadoInstitucion" class="defaultSelect" title="Campo Requerido" alt="*">
                     <option value="-">--Seleccione--</option>
                     <option value="1">San Salvador</option>
                     <option value="2">Santa Ana</option>
@@ -38,7 +38,7 @@
         </tr>
         <tr>
             <td>Nivel de estudio:</td>
-            <td><select name="selNivelEstudioInstitucion" id="selNivelEstudioInstitucion" class="defaultSelect">
+            <td><select name="selNivelEstudioInstitucion" id="selNivelEstudioInstitucion" class="defaultSelect" title="Campo Requerido" alt="*">
                     <option value="-">--Seleccione--</option>
                     <option value="1">Bachillerato</option>
                     <option value="2">Universidad</option>
@@ -49,7 +49,7 @@
         <tr>
             <td>Nombre de institución:</td>
             <td>
-                <input type="text" name="txtDescripcionInst" id="txtDescripcionInst" title="Campo Requerido" class="defaultText">
+                <input type="text" name="txtDescripcionInst" id="txtDescripcionInst" title="Campo Requerido" class="defaultText" alt="*">
             </td>
         </tr>    
         <tr>

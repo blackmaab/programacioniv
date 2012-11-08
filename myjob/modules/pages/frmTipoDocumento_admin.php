@@ -5,7 +5,7 @@
         </tr>
         <tr>
             <td>Tipo Documento:</td>
-            <td><input type="text" id="txtTipoDocumento" name="txtTipoDocumento" /></td>
+            <td><input type="text" id="txtTipoDocumento" name="txtTipoDocumento" class="defaultText" title="Campo Requerido" alt="*" /></td>
         </tr> 
         <tr>
             <td colspan="2" align="right"> 

@@ -3,7 +3,7 @@
         <tr>
             <td>Nombre de nuevo pa&iacute;s:</td>
             <td>
-                <input type="text" name="txtPais" id="txtPais" title="Campo Requerido" class="defaultText">
+                <input type="text" name="txtPais" id="txtPais" title="Campo Requerido" class="defaultText" alt="*">
             </td>
         </tr>    
         <tr>

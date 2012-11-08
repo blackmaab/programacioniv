@@ -5,9 +5,9 @@
         </tr>
         <tr>
             <td>Descripcion:</td>
-            <td><input type="text" name="txtDescripcionArea" id="txtDescripcionArea" /></td>
+            <td><input type="text" name="txtDescripcionArea" id="txtDescripcionArea" alt="*" class="defaultText"/></td>
         </tr>
-       
+
         <tr>
             <td colspan="2" align="right"> 
                 <input type="button" id="btnArea" name="btnArea" value="Agregar">
