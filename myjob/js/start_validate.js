@@ -1,13 +1,15 @@
 //funcion para validacion de campos
 jQuery.validarCampos=function(nameForm){
     var contadorErrores=0;
-		
+    var required;	
     //verificacion de type="text"
     $(nameForm + ' input:text').each(function(index){
         //verificacion si el campo esta vacio
         $(this).removeClass();
-        if($(this).attr('value')=="" || $(this).attr('value')==null){
-            $(this).attr('title','Campo requerido');
+        
+        required= $(this).attr('alt');
+        
+        if(($(this).attr('value')=="" || $(this).attr('value')==null) && required=="*"){            
             $(this).addClass('errorText');
             contadorErrores++;
         }else{
@@ -19,8 +21,8 @@ jQuery.validarCampos=function(nameForm){
     $(nameForm +' input:password').each(function(index){
         //verifiacion si el campo esta vacio
         $(this).removeClass();
-        if($(this).attr('value')=="" || $(this).attr('value')==null){
-            $(this).attr('title','Campo requerido');
+        required= $(this).attr('alt');
+        if(($(this).attr('value')=="" || $(this).attr('value')==null) && required=="*"){                        
             $(this).addClass('errorText');
             contadorErrores++;
         }else{
@@ -32,8 +34,8 @@ jQuery.validarCampos=function(nameForm){
     $(nameForm + ' textarea').each(function(index){
         //verificacion si el campo esta vacio
         $(this).removeClass();
-        if($(this).attr('value')=="" || $(this).attr('value')==null){
-            $(this).attr('title','Campo requerido');
+        required= $(this).attr('alt');
+        if(($(this).attr('value')=="" || $(this).attr('value')==null) && required=="*"){                    
             $(this).addClass('errorTextArea');
             contadorErrores++;
         }else{
@@ -45,8 +47,8 @@ jQuery.validarCampos=function(nameForm){
     $(nameForm + ' select').each(function(){
         //verificacion si no se ha seleccionado nada
         $(this).removeClass();
-        if($(this).attr('value')=="-"){
-            $(this).attr('title','Campo requerido');
+        required= $(this).attr('alt');
+        if($(this).attr('value')=="-" && required=="*"){            
             $(this).addClass('errorSelect');
             contadorErrores++;
         }else{
@@ -109,23 +111,26 @@ jQuery.validarTecla=function(event,caja,opc){
             if($(caja).attr('value').length==4){
                 $(caja).attr('value',$(caja).attr('value')+'-');
             }
-            //			alert($(caja).attr('value').length);
             break;
             
         case "dinero":
             patron=/[0-9.]{1}/;
             if($(caja).attr('value').length==0){
-                patron=/[1-9]{1}/;								
+                patron=/[0-9]{1}/;								
             }else{
-                var punto=$(caja).attr('value').split('.');
-                if(punto[1]){                    
-                    return false;
+                var punto=$(caja).attr('value').split('.');                
+                if(punto[1]!=undefined){
+                    if(punto[1].length>=0 &&punto[1].length<2){                    
+                        patron=/[0-9]{1}/;
+                    }else{
+                        return false;
+                    }
                 }
             //return false;
-            }
+            }            
             break;
     }//switch
-    //alert(String.fromCharCode(tecla));		
+    //alert(String.fromCharCode(tecla));		    
     return patron.test(convertirTecla);
 }//fin de funcion validarTecla
 

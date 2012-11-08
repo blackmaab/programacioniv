@@ -5,7 +5,7 @@
         </tr>
         <tr>
             <td>Tipo Equipo/Herramienta:</td>
-            <td><select name="selEH" id="selEH" class="defaultSelect">
+            <td><select name="selEH" id="selEH" class="defaultSelect" title="Campo Requerido" alt="*">
                     <option value="-">--Seleccione--</option>
                     <option value="1">El&eacute;ctrico</option>
                     <option value="2">Inform&aacute;tico</option>
@@ -15,7 +15,7 @@
         
         <tr>
             <td>Descripci&oacute;n:</td>
-            <td><input type="text" id="txtDescripcionEH" name="txtDescripcionEH" /></td>
+            <td><input type="text" id="txtDescripcionEH" name="txtDescripcionEH" class="defaultText" title="Campo Requrido" alt="*"/></td>
         </tr> 
         <tr>
             <td colspan="2" align="right"> 

@@ -2,7 +2,7 @@
     <table>
         <tr>
             <td>Nivel de Estudio:</td>
-            <td><input type="text" id="txtNivelEstudio" name="txtNivelEstudio" /></td>
+            <td><input type="text" id="txtNivelEstudio" name="txtNivelEstudio" title="Campo Requerido" alt="*"/></td>
         </tr> 
         <tr>
             <td colspan="2" align="right"> 

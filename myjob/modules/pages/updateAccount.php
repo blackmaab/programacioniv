@@ -5,13 +5,13 @@
             <tr>
                 <td>Contrase&ntilde;a:</td>
                 <td>
-                    <input type="password" name="txtPassword" id="txtPassword" title="Campo Requerido" class="defaultText">
+                    <input type="password" name="txtPassword" id="txtPassword" title="Campo Requerido" class="defaultText" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Confirmar contrase&ntilde;a:</td>
                 <td>
-                    <input type="password" name="txtPasswordConfirm" id="txtPasswordConfirm" title="Campo Requerido" class="defaultText">
+                    <input type="password" name="txtPasswordConfirm" id="txtPasswordConfirm" title="Campo Requerido" class="defaultText" alt="*">
                 </td>
             </tr>
             <tr>                

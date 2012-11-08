@@ -10,25 +10,25 @@
             <tr>
                 <td>Nombres:</td>
                 <td>
-                    <input type="text" name="txtNewNombresCu" id="txtNewNombresCu" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewNombresCu" id="txtNewNombresCu" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Apellidos:</td>
                 <td>
-                    <input type="text" name="txtNewApellidosCu" id="txtNewApellidosCu" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewApellidosCu" id="txtNewApellidosCu" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Fecha de nacimiento:</td>
                 <td>
-                    <input type="text" name="txtNewFechaNacimientoCu" id="txtNewFechaNacimientoCu" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewFechaNacimientoCu" id="txtNewFechaNacimientoCu" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Sexo:</td>
                 <td>
-                    <select name="selNewSexoCu" id="selNewSexoCu" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewSexoCu" id="selNewSexoCu" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-">--Seleccione--</option>
                         <option value="f">Femenino</option>
                         <option value="m">Masculino</option>                            
@@ -38,7 +38,7 @@
             <tr>
                 <td>Estado Civil:</td>
                 <td>
-                    <select name="selNewEstadoCivilCu" id="selNewEstadoCivilCu" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewEstadoCivilCu" id="selNewEstadoCivilCu" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-">--Seleccione--</option>
                         <option value="s">Soltero</option>
                         <option value="c">Casado</option>                            
@@ -57,7 +57,7 @@
             <tr>
                 <td>Tipo de documento:</td>
                 <td>
-                    <select name="selNewTipoDocCu" id="selNewTipoDocCu" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewTipoDocCu" id="selNewTipoDocCu" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-" selected="selected">--Seleccione--</option>
                         <option value="1">DUI</option>
                         <option value="2">NIT</option>                            
@@ -69,13 +69,13 @@
             <tr>
                 <td>No. Documento:</td>
                 <td>
-                    <input type="text" name="txtNewNoDocCu" id="txtNewNoDocCu" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewNoDocCu" id="txtNewNoDocCu" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Pa&iacute;s:</td>
                 <td>
-                    <select name="selNewPaisCu" id="selNewPaisCu" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewPaisCu" id="selNewPaisCu" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-" selected="selected">--Seleccione--</option>
                         <option value="1">El Salvador</option>
                         <option value="2">Honduras</option>
@@ -88,7 +88,7 @@
             <tr>
                 <td>Departamento | Estado:</td>
                 <td>
-                    <select name="selNewDepCu" id="selNewDepCu" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewDepCu" id="selNewDepCu" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-" selected="selected">--Seleccione--</option>
                         <option value="1">San Salvador</option>
                         <option value="2">Managua</option>
@@ -101,13 +101,13 @@
             <tr>
                 <td>Direcci&oacute;n:</td>
                 <td>
-                    <textarea rows="5" cols="16" name="txtNewDireccionCu" id="txtNewDireccionCu" class="defaultText" title="Campo Requerido"></textarea>
+                    <textarea rows="5" cols="16" name="txtNewDireccionCu" id="txtNewDireccionCu" class="defaultText" title="Campo Requerido" alt="*"></textarea>
                 </td>                    
             </tr>
             <tr>
                 <td>Tel&eacute;fono Casa:</td>
                 <td>
-                    <input type="text" name="txtNewTelefonoCu" id="txtNewTelefonoCu" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewTelefonoCu" id="txtNewTelefonoCu" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
@@ -131,7 +131,7 @@
             <tr>
                 <td>Correo Electronico:</td>
                 <td>
-                    <input type="text" name="txtNewEmailCu" id="txtNewEmailCu" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewEmailCu" id="txtNewEmailCu" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>            
         </table>        
@@ -143,7 +143,7 @@
             <tr>
                 <td>Nivel de estudio:</td>
                 <td>
-                    <select name="selNewEstuddiosCu" id="selNewEstudiosCu" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewEstuddiosCu" id="selNewEstudiosCu" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-" selected="selected">--Seleccione--</option>
                         <option value="1">Primaria</option>
                         <option value="2">Secundaria</option>
@@ -154,7 +154,7 @@
             <tr>
                 <td>Instituci&oacute;n:</td>
                 <td>
-                    <select name="selNewInstitucionCu" id="selNewInstitucionCu" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewInstitucionCu" id="selNewInstitucionCu" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-" selected="selected">--Seleccione--</option>
                         <option value="1">Escuela y</option>
                         <option value="2">Universidad x</option>
@@ -165,7 +165,7 @@
             <tr>
                 <td>Carrera:</td>
                 <td>
-                    <select name="selNewCarreraCu" id="selNewCarreraCu" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewCarreraCu" id="selNewCarreraCu" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-" selected="selected">--Seleccione--</option>
                         <option value="1">Bachillerato General</option>
                         <option value="2">Ing. Industrial</option>
@@ -176,7 +176,7 @@
             <tr>
                 <td>Estado de la Carrera:</td>
                 <td>
-                    <select name="selNewEstadoCarreraCu" id="selNewEstadoCarreraCu" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewEstadoCarreraCu" id="selNewEstadoCarreraCu" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-" selected="selected">--Seleccione--</option>
                         <option value="1">En proceso</option>
                         <option value="2">Finalizada</option>
@@ -187,13 +187,13 @@
             <tr>
                 <td>A&ntilde;o de Inicio:</td>
                 <td>
-                    <input type="text" name="txtNewAnioIniCu" id="txtNewAnioIniCu" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewAnioIniCu" id="txtNewAnioIniCu" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>A&ntilde;o de Finalizaci&oacute;n:</td>
                 <td>
-                    <input type="text" name="txtNewAnioFinCu" id="txtNewAnioFinCu" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewAnioFinCu" id="txtNewAnioFinCu" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
@@ -204,7 +204,7 @@
             </tr>
         </table>
     </frm>
-  <hr>
+    <hr>
     <h1>Experiencia Laboral</h1>
     <frm name="frmExperenciaLaboral" id="frmExperenciaLaboral" action="#">
         <table>
@@ -289,6 +289,36 @@
             </tr>
         </table>
     </frm>
+
+    <hr>
+    <h1>Experiencia de Equipo</h1>
+    <frm name="frmNewExperienciaEquipo" id="frmNewExperienciaEquipo" action="#">
+        <table>
+            <tr>
+                <td>Tipo de Equipo:</td>
+                <td>
+                    <select name="selNewTipoEquipo" id="selNewTipoEquipo" class="defaultSelect">                       
+                        <option value="-">--Seleccione--</option>
+                        <option value="1">El&eacute;ctrico</option>
+                        <option value="2">Inform&aacute;tico</option>
+                        <option value="3">Industrial</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Equipo Utilizado:</td>
+                <td>
+                    <select name="selNewEquipo" id="selNewEquipo" class="defaultSelect">                       
+                        <option value="-">--Seleccione--</option>
+                        <option value="1">Computadora</option>
+                        <option value="2">Fresadora</option>
+                        <option value="3">Contometro</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </frm>
+
     <hr>
     <h1>Referencias Personales</h1>
     <frm name="frmReferenciaPersonal" id="frmReferenciaPersonal" action="#">
@@ -296,19 +326,19 @@
             <tr>
                 <td>Nombre:</td>
                 <td>
-                    <input type="text" name="txtNewRePeCu" id="txtNewRePeCu" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewRePeCu" id="txtNewRePeCu" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Tel&eacute;fono:</td>
                 <td>
-                    <input type="text" name="txtNewTePeCu" id="txtNewTePeCu" class="defaultText" title="Campo Requerido">
+                    <input type="text" name="txtNewTePeCu" id="txtNewTePeCu" class="defaultText" title="Campo Requerido" alt="*">
                 </td>
             </tr>
             <tr>
                 <td>Parentesco:</td>
                 <td>
-                    <select name="selNewPaPeCu" id="selNewPaPeCu" class="defaultSelect" title="Campo Requerido">
+                    <select name="selNewPaPeCu" id="selNewPaPeCu" class="defaultSelect" title="Campo Requerido" alt="*">
                         <option value="-" selected="selected">--Seleccione--</option>
                         <option value="1">Padre</option>
                         <option value="2">Madre</option>

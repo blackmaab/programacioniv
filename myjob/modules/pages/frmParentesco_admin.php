@@ -5,7 +5,7 @@
         </tr>
         <tr>
             <td>Nuevo parentesco:</td>
-            <td><input type="text" id="txtParentesco" name="txtParentesco" /></td>
+            <td><input type="text" id="txtParentesco" name="txtParentesco" title="Campo Requerido"  class="defaultText" alt="*"/></td>
         </tr> 
         <tr>
             <td colspan="2" align="right"> 

@@ -6,7 +6,7 @@
   
         <tr>
             <td>Descripci&oacute;n:</td>
-            <td><input type="text" id="txtDescripcionEstadoCarrera" name="txtDescripcionEstadoCarrera" /></td>
+            <td><input type="text" id="txtDescripcionEstadoCarrera" name="txtDescripcionEstadoCarrera" title="Campo Requerido" alt="*" class="defaultText"/></td>
         </tr> 
         <tr>
             <td colspan="2" align="right"> 

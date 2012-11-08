@@ -2,7 +2,7 @@
     <table>
         <tr>
             <td>Universidad:</td>
-            <td><select name="selInstitucion" id="selInstitucion" class="defaultSelect">
+            <td><select name="selInstitucion" id="selInstitucion" class="defaultSelect" title="Campo Requerido" alt="*">
                     <option value="-">--Seleccione--</option>
                     <option value="1">Universidad Francisco Gavidia</option>
                     <option value="2">Universidad El Salvador</option>
@@ -16,7 +16,7 @@
         <tr>
             <td>Carrera:</td>
             <td>
-                <input type="text" name="txtDescripcionCarrera" id="txtDescripcionCarrera" title="Campo Requerido" class="defaultText">
+                <input type="text" name="txtDescripcionCarrera" id="txtDescripcionCarrera" title="Campo Requerido" class="defaultText" alt="*">
             </td>
         </tr>    
         <tr>
