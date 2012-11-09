@@ -11,5 +11,16 @@
                 <input type="button" id="btnPais" name="btnPais" value="Agregar">
             </td>
         </tr>
+        <tr>
+            <td>
+                Buscar:
+            </td>
+            <td>
+                <input type="text" name="txtSearchPais" id="txtSearchPais">
+            </td>                
+        </tr>
     </table>
 </frm>
+<div id="searchPais">
+
+</div>

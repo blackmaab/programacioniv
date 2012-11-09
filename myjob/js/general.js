@@ -45,17 +45,19 @@ $(document).ready(function(){
         if($.validarCampos("#frmPais")){
             
             $.post('modules/procedure/pais.procedure.php',
-                $("#frmPais").serialize(),
-                function(data){
-                    if(data=="true"){
-                        $.mensajeInformativo('Tu mensaje ha sido enviado. Gracias por escribirnos','i');				
-                        $.limpiarCampos("#frmPais");
-                    }else{
-                        alert(data);
-                        //$.mensajeInformativo('Hubo un error al guardar el pais. Intente de nuevo.','e');					
-                    }							
-                }
-                );
+            {
+                txtPais:$('#txtPais').attr('value')
+            },
+            function(data){
+                if(data=="true"){
+                    $.mensajeInformativo('Pais agregado exitosamente','i');				
+                    $.limpiarCampos("#frmPais");
+                }else{
+                    alert(data);
+                //$.mensajeInformativo('Hubo un error al guardar el pais. Intente de nuevo.','e');					
+                }							
+            }
+            );
                                
         }else{
             $.mensajeInformativo('Faltan campos por llenar','e');
@@ -66,6 +68,21 @@ $(document).ready(function(){
         return $.validarTecla(event,'#txtPais','nombre');
     });
     
+    
+    $( "#txtSearchPais" ).autocomplete({
+        source: 'modules/procedure/pais.procedure.php',
+        minLength: 2,
+        select: function( event, ui ) {
+            log( ui.item ?
+                "Selected: " + ui.item.value + " aka " + ui.item.id :
+                "Nothing selected, input was " + this.value );
+        }
+    });
+        
+    function log( message ) {
+        $( "<div>" ).text( message ).prependTo( "#searchPais" );
+        $( "#searchPais" ).scrollTop( 0 );
+    }
     //validacion de updateAccount
     $("#btnUpdateAccount:button").button();
     $("#btnUpdateAccount").click(function(){
@@ -127,16 +144,16 @@ $(document).ready(function(){
             /*$.mensajeInformativo('Departamento | Estado agregado exitosamente','i');
             $.limpiarCampos("#frmEstado");*/
             $.post('../modulos/pages/guardarEstado.php',
-            $("#frmEstado").serialize(),
-            function(data){
-                if(data=="true"){
-                    $.mensajeInformativo('Estado | Departamento agregado con exito','i');
-                    $.limpiarCampos("#frmEstado");
-                }else{
-                    $.mensajeInformativo('Hubo un error al guardar el estado. Intente de nuevo.','e');
+                $("#frmEstado").serialize(),
+                function(data){
+                    if(data=="true"){
+                        $.mensajeInformativo('Estado | Departamento agregado con exito','i');
+                        $.limpiarCampos("#frmEstado");
+                    }else{
+                        $.mensajeInformativo('Hubo un error al guardar el estado. Intente de nuevo.','e');
+                    }
                 }
-            }
-            );
+                );
         }else{
             $.mensajeInformativo('Faltan campos por llenar','e');
         }

@@ -25,7 +25,6 @@ class Pais extends DataSource {
             $this->conection->beginTransaction();
             $this->sqlQuery = "INSERT INTO pais VALUES('',:descripcion)";
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
-            //$this->resultSet->bindParam(":idPais",null, PDO::PARAM_NULL);
             $this->resultSet->bindParam(":descripcion", $this->descripcion);
             $this->resultSet->execute();
             $this->conection->commit();
@@ -54,6 +53,32 @@ class Pais extends DataSource {
             $this->borrarCache();
             $this->conection->rollBack();
             echo "Error al actualizar la galeria: " . $e->getMessage() . "\n";
+        }
+    }
+
+    public function searchPais() {
+        try {
+
+            $this->sqlQuery = "SELECT * FROM pais WHERE descripcion like :descripcion";
+            $this->resultSet = $this->conection->prepare($this->sqlQuery);
+            $this->resultSet->bindParam(":descripcion", $this->descripcion);
+            $this->resultSet->execute();
+            $coicidencias=$this->resultSet->rowCount();
+//            echo "Coicidencias: ".$coicidencias;
+// $dato = "[ \"Choice1\", \"Choice2\" ]";
+            $dato = "";
+            while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
+                $dato.="[ \"Choice1\", \"Choice2\" ]";
+                //echo "<option value='" . $row->idpais . "'>" . $row->descripcion . "</option>";
+            }
+
+
+            $this->borrarCache();
+            echo $dato;
+        } catch (PDOException $e) {
+            $this->borrarCache();
+            //$this->conection->rollBack();
+            print_r("Error al consultar el pais: " . $e->getMessage() . "\n");
         }
     }
 
