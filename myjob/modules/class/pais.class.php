@@ -12,7 +12,7 @@ class Pais extends DataSource {
 
 //Código Fuente
 
-    public $idPais=null;
+    public $idPais = null;
     public $descripcion;
 
     public function __construct() {
@@ -20,14 +20,13 @@ class Pais extends DataSource {
         $this->conection->query("SET NAMES 'utf8'");
     }
 
-    public function addPais() {        
-        try {            
-            $pk =null;
+    public function addPais() {
+        try {
             $this->conection->beginTransaction();
-            $this->sqlQuery = "INSERT INTO pais VALUES(:idPais,:descipcion)";
+            $this->sqlQuery = "INSERT INTO pais VALUES('',:descripcion)";
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
-            $this->resultSet->bindParam(":idPais", $pk,PDO::PARAM_NULL);            
-            $this->resultSet->bindParam(":descripcion", $this->descripcion);            
+            //$this->resultSet->bindParam(":idPais",null, PDO::PARAM_NULL);
+            $this->resultSet->bindParam(":descripcion", $this->descripcion);
             $this->resultSet->execute();
             $this->conection->commit();
             $this->borrarCache();

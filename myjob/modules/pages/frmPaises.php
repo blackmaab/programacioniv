@@ -1,4 +1,4 @@
-<frm name="frmPais" id="frmPais" action="#">
+<frm name="frmPais" id="frmPais" method="post" onsubmit="return false">
     <table>
         <tr>
             <td>Nombre de nuevo pa&iacute;s:</td>

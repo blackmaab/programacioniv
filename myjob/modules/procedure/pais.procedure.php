@@ -6,11 +6,18 @@
  * Hora: 09:05:22 PM
  * @author Mario Alvarado
  */
+if (isset($_POST["txtPais"])) {
+    echo $_POST["txtPais"];
+} else {
+    echo "hola";
+}
 
-include_once '../class/Pais.class.php';
-$newPais=new Pais();
-$newPais->descripcion="EL SALVADOR";
-$newPais->addPais();
+/* if (isset($_POST["txtPais"])) {
+  include_once '../class/Pais.class.php';
+  $newPais = new Pais();
+  $newPais->descripcion = CASE_UPPER($_POST["txtPais"]);
+  $newPais->addPais();
+  } */
 
 //include_once('../class/Galeria.class.php');
 //include_once('../class/ConfigSeguridad.class.php');
@@ -43,5 +50,4 @@ $newPais->addPais();
 //} else {
 //    echo "expire-Su Sesion ha Expirado";
 //}
-
 ?>

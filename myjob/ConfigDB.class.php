@@ -12,8 +12,8 @@ class ConfigDB{
         function ConfigDB(){
                 $this->DB_MySQL = "miempleodb";
                 $this->Server_MySQL = "localhost";
-                $this->User_MySQL = "root";
-                $this->Password_MySQL= "";
+                $this->User_MySQL = "admin";
+                $this->Password_MySQL= "admin";
         }
 }
 

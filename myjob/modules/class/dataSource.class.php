@@ -20,7 +20,7 @@ class DataSource {
         try {
             $this->conection = new PDO("mysql:host=" . $this->hostname . ";dbname=" . $this->database, $this->userData, $this->passwordData, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
             //$this->conection->query("SET NAMES 'utf8'");
-            echo "conexion establecida";
+            //echo "conexion establecida";
         } catch (PDOException $e) {
             echo $e->getMessage();
         }

@@ -43,8 +43,20 @@ $(document).ready(function(){
     $("#btnPais:button").button();
     $("#btnPais").click(function(){
         if($.validarCampos("#frmPais")){
-            $.mensajeInformativo('Pais agregado exitosamente', 'i');
-            $.limpiarCampos("#frmPais");
+            
+            $.post('modules/procedure/pais.procedure.php',
+                $("#frmPais").serialize(),
+                function(data){
+                    if(data=="true"){
+                        $.mensajeInformativo('Tu mensaje ha sido enviado. Gracias por escribirnos','i');				
+                        $.limpiarCampos("#frmPais");
+                    }else{
+                        alert(data);
+                        //$.mensajeInformativo('Hubo un error al guardar el pais. Intente de nuevo.','e');					
+                    }							
+                }
+                );
+                               
         }else{
             $.mensajeInformativo('Faltan campos por llenar','e');
         }

@@ -98,6 +98,9 @@ class MyJob {
         unset($dbh);
         unset($borrar);
     } 
+    
+    
+    
 }
 
 ?>
