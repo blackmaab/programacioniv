@@ -22,11 +22,11 @@ class Pais extends DataSource {
 
     public function addPais() {        
         try {            
-            $pk =NULL;
+            $pk =null;
             $this->conection->beginTransaction();
             $this->sqlQuery = "INSERT INTO pais VALUES(:idPais,:descipcion)";
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
-            $this->resultSet->bindParam(":idPais", PDO::PARAM_NULL);            
+            $this->resultSet->bindParam(":idPais", $pk,PDO::PARAM_NULL);            
             $this->resultSet->bindParam(":descripcion", $this->descripcion);            
             $this->resultSet->execute();
             $this->conection->commit();
