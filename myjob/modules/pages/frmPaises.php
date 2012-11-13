@@ -21,6 +21,22 @@
         </tr>
     </table>
 </frm>
-<div id="searchPais">
 
+<div id="searchPais" class="ui-widget">    
+    <table id="users" class="ui-widget ui-widget-content">
+        <thead>
+            <tr class="ui-widget-header ">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>john.doe@example.com</td>
+                <td>johndoe1</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

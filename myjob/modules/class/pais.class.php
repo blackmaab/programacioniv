@@ -63,12 +63,12 @@ class Pais extends DataSource {
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
             $this->resultSet->bindParam(":descripcion", $this->descripcion);
             $this->resultSet->execute();
-            $coicidencias=$this->resultSet->rowCount();
+            $coicidencias = $this->resultSet->rowCount();
 //            echo "Coicidencias: ".$coicidencias;
-// $dato = "[ \"Choice1\", \"Choice2\" ]";
-            $dato = "";
+            //$dato = '["Mario","'+$this->descripcion+'"]';
+//            $dato = "";
             while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
-                $dato.="[ \"Choice1\", \"Choice2\" ]";
+                $dato.="[\"Choice1\", \"Choice2\" ]";
                 //echo "<option value='" . $row->idpais . "'>" . $row->descripcion . "</option>";
             }
 
