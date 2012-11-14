@@ -11,6 +11,8 @@ function addPais(){
             if(data=="true"){
                 $.mensajeInformativo('Pais agregado exitosamente','i');				
                 $.limpiarCampos("#frmPais");                
+                cargarComboPais("#selEstadoEstado");
+                cargarComboPais("#selPaisInstitucion");
             }else{                    
                 $.mensajeInformativo('Hubo un error al guardar el pais. Intente de nuevo.','e');					
             }							
@@ -65,7 +67,9 @@ function updatePais(){
                 $.limpiarCampos("#frmPais");
                 //restableciendo botones
                 $("#btnPais").attr("value","Agregar");
-                searchPais();                
+                searchPais();   
+                cargarComboPais("#selEstadoEstado");
+                cargarComboPais("#selPaisInstitucion");
             }else{                    
                 $.mensajeInformativo('Hubo un error al modificar el pais. Intente de nuevo.','e');					
             }							
@@ -93,7 +97,9 @@ function deletePais(id){
                 $.limpiarCampos("#frmPais");
                 //restableciendo botones
                 $("#btnPais").attr("value","Agregar");
-                searchPais();                 
+                searchPais();  
+                cargarComboPais("#selEstadoEstado");
+                cargarComboPais("#selPaisInstitucion");
             }else{                                    
                 $.mensajeInformativo('Hubo un error al eliminar el pais. Intente de nuevo.','e');					
             }							
@@ -103,6 +109,17 @@ function deletePais(id){
 }
 
 
+function cargarComboPais(idCaja){
+    $.post('modules/procedure/pais.procedure.php',
+    {
+        //txtIdPais:id,            
+        txtType:"cargar"
+    },
+    function(data){            
+        $(idCaja).html(data);
+    }
+    );
+}
 function recargar(){
     window.setInterval(function () {
         location.reload();

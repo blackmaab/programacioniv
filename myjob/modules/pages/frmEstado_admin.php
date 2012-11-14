@@ -4,13 +4,6 @@
             <td>Estado:</td>
             <td>
                 <select name="selEstadoEstado" id="selEstadoEstado" class="defaultSelect" title="Campo Requerido" alt="*">
-                    <option value='-'>Elija un pais</option>
-                    <?php 
-                    $consulta=$obj->consultar_paises();
-                    while($row=$consulta->fetch(PDO::FETCH_OBJ)){
-                        echo "<option value='".$row->idpais."'>".$row->descripcion."</option>";
-                    }
-                    ?>
                 </select>
             </td>
         </tr>

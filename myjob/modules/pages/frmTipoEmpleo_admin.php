@@ -3,11 +3,7 @@
         <tr>
             <td>Area de Empleo:</td>
             <td><select name="selArea" id="selArea" class="defaultSelect" title="Campo Requerido" alt="*">
-                    <option value="-">--Seleccione--</option>
-                    <option value="1">Informatica</option>
-                    <option value="2">Electronica</option>
-                    <option value="3">Industrial</option>
-                    <option value="4">Mecanica</option>
+
                 </select></td>
         </tr>
         <tr>

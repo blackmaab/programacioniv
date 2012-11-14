@@ -112,6 +112,32 @@ class Pais extends DataSource {
         }
     }
 
+    public function cargarComboPais() {
+        try {
+
+            $this->sqlQuery = "SELECT * FROM pais ORDER BY descripcion ASC";
+            $this->resultSet = $this->conection->prepare($this->sqlQuery);
+            //$this->resultSet->bindParam(":descripcion", $this->descripcion);
+            $this->resultSet->execute();
+            $coicidencias = $this->resultSet->rowCount();
+            if ($coicidencias > 0) {
+                echo "<option value='-'>Elija un pais</option>";
+                while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<option value='" . $row["idpais"] . "'>" . $row["descripcion"] . "</option>";
+                }
+            } else {
+                echo "<option value='-'>No hay datos</option>";
+            }
+
+
+            $this->borrarCache();
+        } catch (PDOException $e) {
+            $this->borrarCache();
+            //$this->conection->rollBack();
+            print_r("Error al cargar el pais: " . $e->getMessage() . "\n");
+        }
+    }
+
 }
 
 ?>

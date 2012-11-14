@@ -10,7 +10,8 @@ function addEstado(){
         function(data){
             if(data=="true"){
                 $.mensajeInformativo('Estado agregado exitosamente','i');				
-                $.limpiarCampos("#frmEstado");                
+                $.limpiarCampos("#frmEstado");   
+                cargarComboEstado("#selPaisInstitucion","#selEstadoInstitucion","-");
             }else{                    
                 $.mensajeInformativo('Hubo un error al guardar el estado. Intente de nuevo.','e');					
             }							
@@ -67,7 +68,8 @@ function updateEstado(){
                 $.limpiarCampos("#frmEstado");
                 //restableciendo botones
                 $("#btnEstado").attr("value","Agregar");
-                searchEstado();                
+                searchEstado(); 
+                cargarComboEstado("#selPaisInstitucion","#selEstadoInstitucion","-");
             }else{                    
                 $.mensajeInformativo('Hubo un error al modificar el estado. Intente de nuevo.','e');					
             }							
@@ -95,11 +97,27 @@ function deleteEstado(id){
                 $.limpiarCampos("#frmEstado");
                 //restableciendo botones
                 $("#btnEstado").attr("value","Agregar");
-                searchEstado();                 
+                searchEstado(); 
+                cargarComboEstado("#selPaisInstitucion","#selEstadoInstitucion","-");                
             }else{                                    
                 $.mensajeInformativo('Hubo un error al eliminar el estado. Intente de nuevo.','e');					
             }							
         }
         );
     }
+}
+
+
+
+function cargarComboEstado(idCajaValor,idCajaCargar,fijar){
+    $.post('modules/procedure/estado.procedure.php',
+    {
+        selPaisEstado:$(idCajaValor).attr("value"),
+        txtType:"cargar",
+        txtFijar:fijar
+    },
+    function(data){            
+        $(idCajaCargar).html(data);
+    }
+    );
 }

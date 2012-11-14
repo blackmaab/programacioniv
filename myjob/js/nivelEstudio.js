@@ -11,7 +11,8 @@ function addNivelEstudio(){
         function(data){
             if(data=="true"){
                 $.mensajeInformativo('Nivel Estudio agregado exitosamente','i');				
-                $.limpiarCampos("#frmNivelEstudio");                
+                $.limpiarCampos("#frmNivelEstudio");  
+                cargarComboNivelEstudio("#selNivelEstudioInstitucion");
             }else{                    
                 $.mensajeInformativo('Hubo un error al guardar el NivelEstudio. Intente de nuevo.','e');					
             }							
@@ -66,7 +67,8 @@ function updateNivelEstudio(){
                 $.limpiarCampos("#frmNivelEstudio");
                 //restableciendo botones
                 $("#btnNivelEstudio").attr("value","Agregar");
-                searchNivelEstudio();                
+                searchNivelEstudio();    
+                cargarComboNivelEstudio("#selNivelEstudioInstitucion");
             }else{                    
                 $.mensajeInformativo('Hubo un error al modificar el NivelEstudio. Intente de nuevo.','e');					
             }							
@@ -94,12 +96,26 @@ function deleteNivelEstudio(id){
                 $.limpiarCampos("#frmNivelEstudio");
                 //restableciendo botones
                 $("#btnNivelEstudio").attr("value","Agregar");
-                searchNivelEstudio();                 
+                searchNivelEstudio();
+                cargarComboNivelEstudio("#selNivelEstudioInstitucion");
             }else{                                    
                 $.mensajeInformativo('Hubo un error al eliminar el NivelEstudio. Intente de nuevo.','e');					
             }							
         }
         );
     }
+}
+
+
+function cargarComboNivelEstudio(idCaja){
+    $.post('modules/procedure/nivelEstudio.procedure.php',
+    {
+        //txtIdPais:id,            
+        txtType:"cargar"
+    },
+    function(data){            
+        $(idCaja).html(data);
+    }
+    );
 }
 

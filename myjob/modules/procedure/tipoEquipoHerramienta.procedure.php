@@ -16,6 +16,9 @@ if (isset($_POST["txtType"])) {
     } else if ($_POST["txtType"] == "delete") {
         $newTipoEquipoHerramienta->idTipoEquipoHerramienta = $_POST["txtIdTipoEquipoHerramienta"];
         $newTipoEquipoHerramienta->deleteTipoEquipoHerramienta();
+    } else if ($_POST["txtType"] == "cargar") {
+        $newTipoEquipoHerramienta->fijar = $_POST["txtFijar"];
+        $newTipoEquipoHerramienta->cargarTipoEquipoHerramienta();
     }
 }
 ?>

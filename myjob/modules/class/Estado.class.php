@@ -14,6 +14,7 @@ class Estado extends DataSource {
     public $idEstado = null;
     public $descripcion;
     public $idPais;
+    public $fijar;
 
     public function __construct() {
         $this->conexion(); //inicializa la conexion a la base de datos
@@ -118,6 +119,38 @@ class Estado extends DataSource {
         }
     }
 
+    public function cargarComboEstado() {
+        try {
+
+            $this->sqlQuery = "SELECT * FROM departamento_estado WHERE fk_idPais=:fk_idPais ORDER BY descripcion ASC";
+            $this->resultSet = $this->conection->prepare($this->sqlQuery);
+            $this->resultSet->bindParam(":fk_idPais", $this->idPais);
+            $this->resultSet->execute();
+            $coicidencias = $this->resultSet->rowCount();
+            $seleccionar = "";
+            if ($coicidencias > 0) {
+                echo "<option value='-'>Elija un estado</option>";
+                while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
+                    if ($this->fijar == $row["iddepartamento_estado"]) {
+                        $seleccionar = "selected='selected'";
+                    }
+                    echo "<option value='" . $row["iddepartamento_estado"] . "' " . $seleccionar . ">" . $row["descripcion"] . "</option>";
+                }
+            } else {
+                echo "<option value='-'>No hay datos-" . $this->idPais . "</option>";
+            }
+
+
+            $this->borrarCache();
+        } catch (PDOException $e) {
+            $this->borrarCache();
+            //$this->conection->rollBack();
+            print_r("Error al cargar el pais: " . $e->getMessage() . "\n");
+        }
+    }
+
+    
+    
 }
 
 ?>

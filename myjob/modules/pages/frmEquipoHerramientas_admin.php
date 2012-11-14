@@ -4,23 +4,36 @@
             <td><h4>Agregar un nuevo Equipo o Herramientas.</h4></td>
         </tr>
         <tr>
-            <td>Tipo Equipo/Herramienta:</td>
-            <td><select name="selEH" id="selEH" class="defaultSelect" title="Campo Requerido" alt="*">
-                    <option value="-">--Seleccione--</option>
-                    <option value="1">El&eacute;ctrico</option>
-                    <option value="2">Inform&aacute;tico</option>
-                    <option value="3">Industrial</option>
-                </select></td>
+            <td>Tipo Equipo/Herramienta:
+                <select name="selEH" id="selEH" class="defaultSelect" title="Campo Requerido" alt="*">
+                </select>
+            </td>
         </tr>
-        
+
         <tr>
-            <td>Descripci&oacute;n:</td>
-            <td><input type="text" id="txtDescripcionEH" name="txtDescripcionEH" class="defaultText" title="Campo Requrido" alt="*"/></td>
-        </tr> 
-        <tr>
-            <td colspan="2" align="right"> 
+            <td>Descripci&oacute;n:
+                <input type="text" id="txtDescripcionEH" name="txtDescripcionEH" class="defaultText" title="Campo Requrido" alt="*"/>
+                <input type="hidden" id="txtIdEquipo">
                 <input type="button" id="btnEH" name="btnEH" value="Agregar">
             </td>
         </tr>
     </table>
 </frm>
+
+<frm name="frmSearchEquipo" id="frmSearchEquipo">
+    <table>
+        <tr>
+            <td>
+                Buscar:
+            </td>
+            <td>
+                <input type="text" name="txtSearchEquipo" id="txtSearchEquipo" title="Campo Requerido" class="defaultText" alt="*">
+            </td>
+            <td>
+                <input type="button" name="btnSearchEquipo" id="btnSearchEquipo" value="Buscar">
+            </td>
+        </tr>
+    </table>
+</frm>
+<hr>
+<div id="searchEquipo" align="center"></div>

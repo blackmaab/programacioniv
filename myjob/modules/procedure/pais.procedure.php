@@ -20,6 +20,9 @@ if (isset($_POST["txtType"])) {
     } else if ($_POST["txtType"] == "delete") {
         $newPais->idPais = $_POST["txtIdPais"];
         $newPais->deletePais();
+    }else if ($_POST["txtType"] == "cargar") {
+        //$newPais->idPais = $_POST["txtIdPais"];
+        $newPais->cargarComboPais();
     }
 }
 ?>

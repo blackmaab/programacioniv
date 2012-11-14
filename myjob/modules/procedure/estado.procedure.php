@@ -18,6 +18,10 @@ if (isset($_POST["txtType"])) {
     } else if ($_POST["txtType"] == "delete") {
         $newEstado->idEstado = $_POST["txtIdEstado"];
         $newEstado->deleteEstado();
+    }else if ($_POST["txtType"] == "cargar") {
+        $newEstado->idPais = $_POST["selPaisEstado"];
+        $newEstado->fijar=$_POST["txtFijar"];
+        $newEstado->cargarComboEstado();
     }
 }
 ?>

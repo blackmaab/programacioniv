@@ -13,6 +13,7 @@ class AreaTrabajo extends DataSource {
 
     public $idAreaTrabajo = null;
     public $descripcion;
+    public $fijar;
 
     public function __construct() {
         $this->conexion(); //inicializa la conexion a la base de datos
@@ -110,6 +111,36 @@ class AreaTrabajo extends DataSource {
             $this->borrarCache();
             $this->conection->rollBack();
             echo "Error al eliminar AreaTrabajo: " . $e->getMessage() . "\n";
+        }
+    }
+
+    public function cargarComboAreaTrabajo() {
+        try {
+
+            $this->sqlQuery = "SELECT * FROM area_empleo ORDER BY descripcion ASC";
+            $this->resultSet = $this->conection->prepare($this->sqlQuery);
+            //$this->resultSet->bindParam(":descripcion", $this->descripcion);
+            $this->resultSet->execute();
+            $coicidencias = $this->resultSet->rowCount();
+            if ($coicidencias > 0) {
+                $seleccionar = "";
+                echo "<option value='-'>Elija un area de empleo</option>";
+                while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
+                    if ($row["idarea_empleo"] == $this->fijar) {
+                        $seleccionar = "selected='selected'";
+                    }
+                    echo "<option value='" . $row["idarea_empleo"] . "' " . $seleccionar . ">" . $row["descripcion"] . "</option>";
+                }
+            } else {
+                echo "<option value='-'>No hay datos</option>";
+            }
+
+
+            $this->borrarCache();
+        } catch (PDOException $e) {
+            $this->borrarCache();
+            //$this->conection->rollBack();
+            print_r("Error al cargar el pais: " . $e->getMessage() . "\n");
         }
     }
 

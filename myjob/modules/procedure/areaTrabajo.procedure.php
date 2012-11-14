@@ -16,6 +16,9 @@ if (isset($_POST["txtType"])) {
     } else if ($_POST["txtType"] == "delete") {
         $newAreaTrabajo->idAreaTrabajo = $_POST["txtIdAreaTrabajo"];
         $newAreaTrabajo->deleteAreaTrabajo();
+    }else if ($_POST["txtType"] == "cargar") {
+        $newAreaTrabajo->fijar=$_POST["txtFijar"];
+        $newAreaTrabajo->cargarComboAreaTrabajo();
     }
 }
 ?>

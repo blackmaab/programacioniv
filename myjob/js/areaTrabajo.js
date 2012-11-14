@@ -9,7 +9,8 @@ function addAreaTrabajo(){
         function(data){
             if(data=="true"){
                 $.mensajeInformativo('AreaTrabajo agregado exitosamente','i');				
-                $.limpiarCampos("#frmAreaTrabajo");                
+                $.limpiarCampos("#frmAreaTrabajo");  
+                cargarComboAreaTrabajo("#selArea", "-");
             }else{                    
                 $.mensajeInformativo('Hubo un error al guardar el areaTrabajo. Intente de nuevo.','e');					
             }							
@@ -64,7 +65,8 @@ function updateAreaTrabajo(){
                 $.limpiarCampos("#frmAreaTrabajo");
                 //restableciendo botones
                 $("#btnAreaTrabajo").attr("value","Agregar");
-                searchAreaTrabajo();                
+                searchAreaTrabajo();     
+                cargarComboAreaTrabajo("#selArea", "-");
             }else{                    
                 $.mensajeInformativo('Hubo un error al modificar el areaTrabajo. Intente de nuevo.','e');					
             }							
@@ -92,12 +94,26 @@ function deleteAreaTrabajo(id){
                 $.limpiarCampos("#frmAreaTrabajo");
                 //restableciendo botones
                 $("#btnAreaTrabajo").attr("value","Agregar");
-                searchAreaTrabajo();                 
+                searchAreaTrabajo();  
+                cargarComboAreaTrabajo("#selArea", "-");
             }else{                                    
                 $.mensajeInformativo('Hubo un error al eliminar el areaTrabajo. Intente de nuevo.','e');					
             }							
         }
         );
     }
+}
+
+function cargarComboAreaTrabajo(idCaja,fijar){
+    $.post('modules/procedure/areaTrabajo.procedure.php',
+    {
+        //txtIdPais:id,            
+        txtType:"cargar",
+        txtFijar:fijar
+    },
+    function(data){            
+        $(idCaja).html(data);
+    }
+    );
 }
 

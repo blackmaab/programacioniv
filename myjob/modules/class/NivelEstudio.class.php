@@ -114,6 +114,32 @@ class NivelEstudio extends DataSource {
         }
     }
 
+    
+    public function cargarComboNivelEstudio() {
+        try {
+
+            $this->sqlQuery = "SELECT * FROM nivel_estudio ORDER BY descripcion ASC";
+            $this->resultSet = $this->conection->prepare($this->sqlQuery);
+            //$this->resultSet->bindParam(":descripcion", $this->descripcion);
+            $this->resultSet->execute();
+            $coicidencias = $this->resultSet->rowCount();
+            if ($coicidencias > 0) {
+                echo "<option value='-'>Elija un nivel de estudio</option>";
+                while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<option value='" . $row["idnivel_estudio"] . "'>" . $row["descripcion"] . "</option>";
+                }
+            } else {
+                echo "<option value='-'>No hay datos</option>";
+            }
+
+
+            $this->borrarCache();
+        } catch (PDOException $e) {
+            $this->borrarCache();
+            //$this->conection->rollBack();
+            print_r("Error al cargar el pais: " . $e->getMessage() . "\n");
+        }
+    }
 }
 
 ?>

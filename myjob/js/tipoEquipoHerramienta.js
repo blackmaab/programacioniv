@@ -9,7 +9,8 @@ function addTipoEquipoHerramienta(){
         function(data){
             if(data=="true"){
                 $.mensajeInformativo('TipoEquipoHerramienta agregado exitosamente','i');				
-                $.limpiarCampos("#frmTipoEquipoHerramienta");                
+                $.limpiarCampos("#frmTipoEquipoHerramienta");  
+                cargarComboTipoEquipoHerramienta("#selEH", "-");
             }else{                    
                 $.mensajeInformativo('Hubo un error al guardar el TipoEquipoHerramienta. Intente de nuevo.','e');					                
                 
@@ -65,7 +66,8 @@ function updateTipoEquipoHerramienta(){
                 $.limpiarCampos("#frmTipoEquipoHerramienta");
                 //restableciendo botones
                 $("#btnTipoEquipoHerramienta").attr("value","Agregar");
-                searchTipoEquipoHerramienta();                
+                searchTipoEquipoHerramienta();       
+                cargarComboTipoEquipoHerramienta("#selEH", "-");
             }else{                    
                 $.mensajeInformativo('Hubo un error al modificar el TipoEquipoHerramienta. Intente de nuevo.','e');					
             }							
@@ -93,13 +95,28 @@ function deleteTipoEquipoHerramienta(id){
                 $.limpiarCampos("#frmTipoEquipoHerramienta");
                 //restableciendo botones
                 $("#btnTipoEquipoHerramienta").attr("value","Agregar");
-                searchTipoEquipoHerramienta();                 
+                searchTipoEquipoHerramienta(); 
+                cargarComboTipoEquipoHerramienta("#selEH", "-");                
             }else{                                    
                 $.mensajeInformativo('Hubo un error al eliminar el TipoEquipoHerramienta. Intente de nuevo.','e');					                
             }							
         }
         );
     }
+}
+
+
+function cargarComboTipoEquipoHerramienta(idCaja,fijar){
+    $.post('modules/procedure/tipoEquipoHerramienta.procedure.php',
+    {
+        //txtIdPais:id,            
+        txtType:"cargar",
+        txtFijar:fijar
+    },
+    function(data){            
+        $(idCaja).html(data);
+    }
+    );
 }
 
 

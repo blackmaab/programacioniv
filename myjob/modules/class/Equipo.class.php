@@ -1,31 +1,32 @@
 <?php
 
 /**
- * Description of TipoEquipoHerramienta
+ * Description of Equipo
  *
  * @author malvarado
  */
 include_once 'DataSource.class.php';
 
-class TipoEquipoHerramienta extends DataSource {
+class Equipo extends DataSource {
 
-//Código Fuente
+    //Código Fuente
 
-    public $idTipoEquipoHerramienta = null;
+    public $idEquipo = null;
     public $descripcion;
-    public $fijar;
+    public $idTipoEquipo;
 
     public function __construct() {
         $this->conexion(); //inicializa la conexion a la base de datos
         $this->conection->query("SET NAMES 'utf8'");
     }
 
-    public function addTipoEquipoHerramienta() {
+    public function addEquipo() {
         try {
             $this->conection->beginTransaction();
-            $this->sqlQuery = "INSERT INTO tipo_equipo_herramienta VALUES('',:descripcion)";
+            $this->sqlQuery = "INSERT INTO herramienta_equipo VALUES('',:descripcion,:fk_equipo)";
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
             $this->resultSet->bindParam(":descripcion", $this->descripcion);
+            $this->resultSet->bindParam(":fk_equipo", $this->idTipoEquipo);
             $this->resultSet->execute();
             $this->conection->commit();
             $this->borrarCache();
@@ -33,14 +34,18 @@ class TipoEquipoHerramienta extends DataSource {
         } catch (PDOException $e) {
             $this->borrarCache();
             //$this->conection->rollBack();
-            print_r("Error al guardar el TipoEquipoHerramienta: " . $e->getMessage() . "\n");
+            print_r("Error al guardar el equipo: " . $e->getMessage() . "\n");
         }
     }
 
-    public function searchTipoEquipoHerramienta() {
+    public function searchEquipo() {
         try {
 
-            $this->sqlQuery = "SELECT * FROM tipo_equipo_herramienta WHERE descripcion like :descripcion";
+            $this->sqlQuery = "SELECT a.* , b.descripcion AS tipo ";
+            $this->sqlQuery.="FROM herramienta_equipo AS a ";
+            $this->sqlQuery.="INNER JOIN tipo_equipo_herramienta AS b ON a.fk_equipo = b.idtipo_equipo_herramienta ";
+            $this->sqlQuery.="WHERE a.descripcion LIKE :descripcion ";
+
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
             $this->resultSet->bindParam(":descripcion", $this->descripcion);
             $this->resultSet->execute();
@@ -52,6 +57,7 @@ class TipoEquipoHerramienta extends DataSource {
                 echo "<tr class='ui-widget-header'>";
                 echo "<th>#</th>";
                 echo "<th>Descripción</th>";
+                echo "<th>Tipo de Equipo</th>";
                 echo "<th>Editar</th>";
                 echo "<th>Eliminar</th>";
                 echo "</tr>";
@@ -61,8 +67,9 @@ class TipoEquipoHerramienta extends DataSource {
                 while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
                     echo "<tr><td><b>" . ($cont++) . "</b></td>";
                     echo "<td>" . $row["descripcion"] . "</td>";
-                    echo "<td align='center'><input type='image' src='images/edit.png' onclick='selTipoEquipoHerramienta(\"" . $row["idtipo_equipo_herramienta"] . "\",\"" . $row["descripcion"] . "\")'></td>";
-                    echo "<td align='center'><input type='image' src='images/del.png' onclick='deleteTipoEquipoHerramienta(\"" . $row["idtipo_equipo_herramienta"] . "\")'></td></tr>";
+                    echo "<td>" . $row["tipo"] . "</td>";
+                    echo "<td align='center'><input type='image' src='images/edit.png' onclick='selEquipo(\"" . $row["idherramienta_equipo"] . "\",\"" . $row["descripcion"] . "\",\"" . $row["fk_equipo"] . "\")'></td>";
+                    echo "<td align='center'><input type='image' src='images/del.png' onclick='deleteEquipo(\"" . $row["idherramienta_equipo"] . "\")'></td></tr>";
                 }
                 echo "</tbody>";
                 echo "</table>";
@@ -75,17 +82,18 @@ class TipoEquipoHerramienta extends DataSource {
         } catch (PDOException $e) {
             $this->borrarCache();
             //$this->conection->rollBack();
-            print_r("Error al consultar el TipoEquipoHerramienta: " . $e->getMessage() . "\n");
+            print_r("Error al consultar el equipo: " . $e->getMessage() . "\n");
         }
     }
 
-    public function updateTipoEquipoHerramienta() {
+    public function updateEquipo() {
         try {
             $this->conection->beginTransaction();
-            $this->sqlQuery = "UPDATE tipo_equipo_herramienta SET descripcion=:descripcion WHERE idtipo_equipo_herramienta=:idTipoEquipoHerramienta";
+            $this->sqlQuery = "UPDATE herramienta_equipo SET descripcion=:descripcion,fk_equipo=:fk_equipo WHERE idherramienta_equipo=:idequipo";
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
             $this->resultSet->bindParam(":descripcion", $this->descripcion);
-            $this->resultSet->bindParam(":idTipoEquipoHerramienta", $this->idTipoEquipoHerramienta);
+            $this->resultSet->bindParam(":fk_equipo", $this->idTipoEquipo);
+            $this->resultSet->bindParam(":idequipo", $this->idEquipo);
             $this->resultSet->execute();
             $this->conection->commit();
             $this->borrarCache();
@@ -93,17 +101,16 @@ class TipoEquipoHerramienta extends DataSource {
         } catch (PDOException $e) {
             $this->borrarCache();
             $this->conection->rollBack();
-            echo "Error al actualizar la TipoEquipoHerramienta: " . $e->getMessage() . "\n";
+            echo "Error al actualizar la equipo: " . $e->getMessage() . "\n";
         }
     }
 
-    public function deleteTipoEquipoHerramienta() {
-
+    public function deleteEquipo() {
         try {
             $this->conection->beginTransaction();
-            $this->sqlQuery = "DELETE FROM tipo_equipo_herramienta WHERE idtipo_equipo_herramienta=:idTipoEquipoHerramienta";
+            $this->sqlQuery = "DELETE FROM herramienta_equipo WHERE idherramienta_equipo=:idequipo";
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
-            $this->resultSet->bindParam(":idTipoEquipoHerramienta", $this->idTipoEquipoHerramienta);
+            $this->resultSet->bindParam(":idequipo", $this->idEquipo);
             $this->resultSet->execute();
             $this->conection->commit();
             $this->borrarCache();
@@ -111,26 +118,22 @@ class TipoEquipoHerramienta extends DataSource {
         } catch (PDOException $e) {
             $this->borrarCache();
             $this->conection->rollBack();
-            echo "Error al eliminar TipoEquipoHerramienta: " . $e->getMessage() . "\n";
+            echo "Error al eliminar equipo: " . $e->getMessage() . "\n";
         }
     }
 
-    public function cargarTipoEquipoHerramienta() {
+    public function cargarComboEquipo() {
         try {
 
-            $this->sqlQuery = "SELECT * FROM tipo_equipo_herramienta ORDER BY descripcion ASC";
+            $this->sqlQuery = "SELECT * FROM equipo ORDER BY descripcion ASC";
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
             //$this->resultSet->bindParam(":descripcion", $this->descripcion);
             $this->resultSet->execute();
             $coicidencias = $this->resultSet->rowCount();
             if ($coicidencias > 0) {
-                echo "<option value='-'>Elija un tipo de equipo</option>";
-                $seleccionar = "";
+                echo "<option value='-'>Elija un equipo</option>";
                 while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
-                    if($this->fijar==$row["idtipo_equipo_herramienta"]) {
-                        $seleccionar = "selected='selected'";
-                    }
-                    echo "<option value='" . $row["idtipo_equipo_herramienta"] . "' " . $seleccionar . ">" . $row["descripcion"] . "</option>";
+                    echo "<option value='" . $row["idequipo"] . "'>" . $row["descripcion"] . "</option>";
                 }
             } else {
                 echo "<option value='-'>No hay datos</option>";
@@ -141,7 +144,7 @@ class TipoEquipoHerramienta extends DataSource {
         } catch (PDOException $e) {
             $this->borrarCache();
             //$this->conection->rollBack();
-            print_r("Error al cargar el tipoEquipoHerramienta: " . $e->getMessage() . "\n");
+            print_r("Error al cargar el equipo: " . $e->getMessage() . "\n");
         }
     }
 

@@ -21,6 +21,9 @@ if (isset($_POST["txtType"])) {
     } else if ($_POST["txtType"] == "delete") {
         $newNivelEstudio->idNivelEstudio = $_POST["txtIdNivelEstudio"];
         $newNivelEstudio->deleteNivelEstudio();
+    }else if ($_POST["txtType"] == "cargar") {
+     //   $newNivelEstudio->idNivelEstudio = $_POST["txtIdNivelEstudio"];
+        $newNivelEstudio->cargarComboNivelEstudio();
     }
 }
 ?>

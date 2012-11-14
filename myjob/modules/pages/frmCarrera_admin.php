@@ -2,27 +2,35 @@
     <table>
         <tr>
             <td>Universidad:</td>
-            <td><select name="selInstitucion" id="selInstitucion" class="defaultSelect" title="Campo Requerido" alt="*">
-                    <option value="-">--Seleccione--</option>
-                    <option value="1">Universidad Francisco Gavidia</option>
-                    <option value="2">Universidad El Salvador</option>
-                    <option value="3">Universidad Don Bosco</option>
-                    <option value="4">Universidad Tecnol&oacute;gica</option>
-                    <option value="5">Universidad Evang&eacute;lica de El Salvador</option>
-                    <option value="6">Universidad Centroam&eacute;ricana Jos&eacute; Sime&oacute;n Ca&ntilde;as</option>
-                    
-                </select></td>
+            <td><select name="selCarreraInstitucion" id="selCarreraInstitucion" class="defaultSelect" title="Campo Requerido" alt="*">                   
+                </select>
+            </td>
         </tr>
         <tr>
             <td>Carrera:</td>
             <td>
                 <input type="text" name="txtDescripcionCarrera" id="txtDescripcionCarrera" title="Campo Requerido" class="defaultText" alt="*">
-            </td>
-        </tr>    
-        <tr>
-            <td colspan="2" align="right"> 
                 <input type="button" id="btnCarrera" name="btnCarrera" value="Agregar">
+                <input type="hidden" id="txtIdCarrera">
             </td>
         </tr>
     </table>
 </frm>
+
+<frm name="frmSearchCarrera" id="frmSearchCarrera">
+    <table>
+        <tr>
+            <td>
+                Buscar:
+            </td>
+            <td>
+                <input type="text" name="txtSearchCarrera" id="txtSearchCarrera" title="Campo Requerido" class="defaultText" alt="*">
+            </td>
+            <td>
+                <input type="button" name="btnSearchCarrera" id="btnSearchCarrera" value="Buscar">
+            </td>
+        </tr>
+    </table>
+</frm>
+<hr>
+<div id="searchCarrera" align="center"></div>
