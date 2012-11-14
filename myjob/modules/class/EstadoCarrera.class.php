@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Nombre de Archivo: pais.class.php
+ * Nombre de Archivo: EstadoCarrera.class.php
  * @author Mario Alvarado
  */
 include_once 'DataSource.class.php';
 
-class Pais extends DataSource {
-
+class EstadoCarrera extends DataSource{
 //Código Fuente
+    //Código Fuente
 
-    public $idPais = null;
+    public $idEstadoCarrera = null;
     public $descripcion;
 
     public function __construct() {
@@ -18,10 +18,10 @@ class Pais extends DataSource {
         $this->conection->query("SET NAMES 'utf8'");
     }
 
-    public function addPais() {
+    public function addEstadoCarrera() {
         try {
             $this->conection->beginTransaction();
-            $this->sqlQuery = "INSERT INTO pais VALUES('',:descripcion)";
+            $this->sqlQuery = "INSERT INTO estado_carrera VALUES('',:descripcion)";
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
             $this->resultSet->bindParam(":descripcion", $this->descripcion);
             $this->resultSet->execute();
@@ -31,14 +31,14 @@ class Pais extends DataSource {
         } catch (PDOException $e) {
             $this->borrarCache();
             //$this->conection->rollBack();
-            print_r("Error al guardar el pais: " . $e->getMessage() . "\n");
-        }
+            print_r("Error al guardar el EstadoCarrera: " . $e->getMessage() . "\n");
+        }        
     }
 
-    public function searchPais() {
+    public function searchEstadoCarrera() {
         try {
 
-            $this->sqlQuery = "SELECT * FROM pais WHERE descripcion like :descripcion";
+            $this->sqlQuery = "SELECT * FROM estado_carrera WHERE descripcion like :descripcion";
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
             $this->resultSet->bindParam(":descripcion", $this->descripcion);
             $this->resultSet->execute();
@@ -59,8 +59,8 @@ class Pais extends DataSource {
                 while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
                     echo "<tr><td><b>" . ($cont++) . "</b></td>";
                     echo "<td>" . $row["descripcion"] . "</td>";
-                    echo "<td align='center'><input type='image' src='images/edit.png' onclick='selPais(\"" . $row["idpais"] . "\",\"" . $row["descripcion"] . "\")'></td>";
-                    echo "<td align='center'><input type='image' src='images/del.png' onclick='deletePais(\"" . $row["idpais"] . "\")'></td></tr>";
+                    echo "<td align='center'><input type='image' src='images/edit.png' onclick='selEstadoCarrera(\"" . $row["idestado_carrera"] . "\",\"" . $row["descripcion"] . "\")'></td>";
+                    echo "<td align='center'><input type='image' src='images/del.png' onclick='deleteEstadoCarrera(\"" . $row["idestado_carrera"] . "\")'></td></tr>";
                 }
                 echo "</tbody>";
                 echo "</table>";
@@ -73,17 +73,17 @@ class Pais extends DataSource {
         } catch (PDOException $e) {
             $this->borrarCache();
             //$this->conection->rollBack();
-            print_r("Error al consultar el pais: " . $e->getMessage() . "\n");
+            print_r("Error al consultar el EstadoCarrera: " . $e->getMessage() . "\n");
         }
     }
 
-    public function updatePais() {
+    public function updateEstadoCarrera() {
         try {
             $this->conection->beginTransaction();
-            $this->sqlQuery = "UPDATE pais SET descripcion=:descripcion WHERE idpais=:idpais";
+            $this->sqlQuery = "UPDATE estado_carrera SET descripcion=:descripcion WHERE idestado_carrera=:idEstadoCarrera";
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
             $this->resultSet->bindParam(":descripcion", $this->descripcion);
-            $this->resultSet->bindParam(":idpais", $this->idPais);
+            $this->resultSet->bindParam(":idEstadoCarrera", $this->idEstadoCarrera);
             $this->resultSet->execute();
             $this->conection->commit();
             $this->borrarCache();
@@ -91,16 +91,16 @@ class Pais extends DataSource {
         } catch (PDOException $e) {
             $this->borrarCache();
             $this->conection->rollBack();
-            echo "Error al actualizar la pais: " . $e->getMessage() . "\n";
+            echo "Error al actualizar la Estado Carrera: " . $e->getMessage() . "\n";
         }
     }
 
-    public function deletePais() {
+    public function deleteEstadoCarrera() {
         try {
             $this->conection->beginTransaction();
-            $this->sqlQuery = "DELETE FROM pais WHERE idpais=:idpais";
+            $this->sqlQuery = "DELETE FROM estado_carrera WHERE idestado_carrera=:idEstadoCarrera";
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
-            $this->resultSet->bindParam(":idpais", $this->idPais);
+            $this->resultSet->bindParam(":idEstadoCarrera", $this->idEstadoCarrera);
             $this->resultSet->execute();
             $this->conection->commit();
             $this->borrarCache();
@@ -108,7 +108,7 @@ class Pais extends DataSource {
         } catch (PDOException $e) {
             $this->borrarCache();
             $this->conection->rollBack();
-            echo "Error al eliminar pais: " . $e->getMessage() . "\n";
+            echo "Error al eliminar Estado Carrera: " . $e->getMessage() . "\n";
         }
     }
 

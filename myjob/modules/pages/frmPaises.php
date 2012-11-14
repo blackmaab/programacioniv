@@ -1,42 +1,31 @@
-<frm name="frmPais" id="frmPais" method="post" onsubmit="return false">
+<frm name="frmPais" id="frmPais">
     <table>
         <tr>
             <td>Nombre de nuevo pa&iacute;s:</td>
             <td>
                 <input type="text" name="txtPais" id="txtPais" title="Campo Requerido" class="defaultText" alt="*">
             </td>
-        </tr>    
-        <tr>
-            <td colspan="2" align="right"> 
+            <td>
                 <input type="button" id="btnPais" name="btnPais" value="Agregar">
+                <input type="hidden" id="txtIdPais">
             </td>
-        </tr>
+        </tr>            
+    </table>
+</frm>
+<frm name="frmSearchPais" id="frmSearchPais">
+    <table>
         <tr>
             <td>
                 Buscar:
             </td>
             <td>
-                <input type="text" name="txtSearchPais" id="txtSearchPais">
-            </td>                
+                <input type="text" name="txtSearchPais" id="txtSearchPais" title="Campo Requerido" class="defaultText" alt="*">
+            </td>
+            <td>
+                <input type="button" name="btnSearchPais" id="btnSearchPais" value="Buscar">
+            </td>
         </tr>
     </table>
 </frm>
-
-<div id="searchPais" class="ui-widget">    
-    <table id="users" class="ui-widget ui-widget-content">
-        <thead>
-            <tr class="ui-widget-header ">
-                <th>Name</th>
-                <th>Email</th>
-                <th>Password</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>John Doe</td>
-                <td>john.doe@example.com</td>
-                <td>johndoe1</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<hr>
+<div id="searchPais" align="center"></div>

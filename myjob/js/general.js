@@ -42,61 +42,23 @@ $(document).ready(function(){
     //validacion de formulario pais
     $("#btnPais:button").button();
     $("#btnPais").click(function(){
-        if($.validarCampos("#frmPais")){
-            
-            $.post('modules/procedure/pais.procedure.php',
-            {
-                txtPais:$('#txtPais').attr('value')
-            },
-            function(data){
-                if(data=="true"){
-                    $.mensajeInformativo('Pais agregado exitosamente','i');				
-                    $.limpiarCampos("#frmPais");
-                }else{
-                    alert(data);
-                //$.mensajeInformativo('Hubo un error al guardar el pais. Intente de nuevo.','e');					
-                }							
-            }
-            );
-                               
+        if($(this).attr("value")=="Agregar"){
+            addPais();            
         }else{
-            $.mensajeInformativo('Faltan campos por llenar','e');
+            updatePais();
         }
+        
     });
     
     $('#txtPais').keypress(function(event){
         return $.validarTecla(event,'#txtPais','nombre');
     });
     
+    $("#btnSearchPais:button").button();
+    $("#btnSearchPais:button").click(function(){
+        searchPais();
+    });
     
-    $( "#txtSearchPais" ).autocomplete({
-        source: 'modules/procedure/pais.procedure.php',
-        minLength: 2,
-        select: function( event, ui ) {
-            log( ui.item ?
-                "Selected: " + ui.item.value + " aka " + ui.item.id :
-                "Nothing selected, input was " + this.value );
-        }
-    });
-        
-    function log( message ) {
-        $( "<div>" ).text( message ).prependTo( "#searchPais" );
-        $( "#searchPais" ).scrollTop( 0 );
-    }
-    //validacion de updateAccount
-    $("#btnUpdateAccount:button").button();
-    $("#btnUpdateAccount").click(function(){
-        if($.validarCampos("#frmUpdateAccount")){
-            if($("#txtPassword").attr("value")==$("#txtPasswordConfirm").attr("value")){
-                $.mensajeInformativo('Contraseña actualizada', 'i');
-                $.limpiarCampos("#frmUpdateAccount");
-            }else{
-                $.mensajeInformativo('Contraseñas no coiciden', 'e');
-            }
-        }else{
-            $.mensajeInformativo('Faltan campos por llenar','e');
-        }
-    });
      
      
     //validacion de formulario de nuevo usuario 
@@ -181,15 +143,19 @@ $(document).ready(function(){
     //validacion de formulario Empresa
     $("#btnEstadoCarrera:button").button();
     $("#btnEstadoCarrera").click(function(){
-        if($.validarCampos("#frmEstadoCarrera")){
-            $.mensajeInformativo('Estado Carrera agregado exitosamente','i');
-            $.limpiarCampos("#frmEmpresa");
+        if($(this).attr("value")=="Agregar"){
+            addEstadoCarrera();            
         }else{
-            $.mensajeInformativo('Faltan campos por llenar','e');
+            updateEstadoCarrera();
         }
     });
     $('#txtDescripcionEstadoCarrera').keypress(function(event){
         return $.validarTecla(event,'#txtDescripcionEstadoCarrera','nombre');
+    });
+    
+    $("#btnSearchEstadoCarrera:button").button();
+    $("#btnSearchEstadoCarrera:button").click(function(){
+        searchEstadoCarrera();
     });
    
     //validacion de formulario institucion educativa
@@ -278,42 +244,55 @@ $(document).ready(function(){
     //validacion de Nivel de Estudio
     $("#btnNivelEstudio:button").button();
     $("#btnNivelEstudio").click(function(){
-        if($.validarCampos("#frmNivelEstudio")){
-            $.mensajeInformativo('Nivel Estudio agregado exitosamente','i');
-            $.limpiarCampos("#frmNivelEstudio");
+        if($(this).attr("value")=="Agregar"){
+            addNivelEstudio();            
         }else{
-            $.mensajeInformativo('Faltan campos por llenar','e');
+            updateNivelEstudio();
         }
     });
     $('#txtNivelEstudio').keypress(function(event){
         return $.validarTecla(event,'#txtNivelEstudio','nombre');
     });
+    $("#btnSearchNivelEstudio:button").button();
+    $("#btnSearchNivelEstudio:button").click(function(){
+        searchNivelEstudio();
+    });
+    
     
     //validacion de Tipo de Documento
     $("#btnTipoDocumento:button").button();
     $("#btnTipoDocumento").click(function(){
-        if($.validarCampos("#frmTipoDocumento")){
-            $.mensajeInformativo('Tipo de documento agregado exitosamente','i');
-            $.limpiarCampos("#frmTipoDocumento");
+        if($(this).attr("value")=="Agregar"){
+            addTipoDocumento();            
         }else{
-            $.mensajeInformativo('Faltan campos por llenar','e');
+            updateTipoDocumento();
         }
     });
     $('#txtTipoDocumento').keypress(function(event){
         return $.validarTecla(event,'#txtTipoDocumento','nombre');
     });
+    $("#btnSearchTipoDocumento:button").button();
+    $("#btnSearchTipoDocumento:button").click(function(){
+        searchTipoDocumento();
+    });
+    
+    
     //validacion de Parentesco
     $("#btnParentesco:button").button();
     $("#btnParentesco").click(function(){
-        if($.validarCampos("#frmParentesco")){
-            $.mensajeInformativo('Parentesco agregado exitosamente','i');
-            $.limpiarCampos("#frmParentesco");
+        if($(this).attr("value")=="Agregar"){
+            addParentesco();
         }else{
-            $.mensajeInformativo('Faltan campos por llenar','e');
+            updateParentesco();
         }
     });
     $('#txtParentesco').keypress(function(event){
         return $.validarTecla(event,'#txtParentesco','nombre');
+    });
+    
+    $("#btnSearchParentesco:button").button();
+    $("#btnSearchParentesco:button").click(function(){
+        searchParentesco();
     });
    
    
@@ -471,3 +450,11 @@ $(document).ready(function(){
         }
     });
 });
+
+//incluyendo mas archivos
+document.write("<script type='text/javascript' src='js/pais.js'></script>");
+document.write("<script type='text/javascript' src='js/estadoCarrera.js'></script>");
+document.write("<script type='text/javascript' src='js/nivelEstudio.js'></script>");
+document.write("<script type='text/javascript' src='js/tipoDocumento.js'></script>");
+document.write("<script type='text/javascript' src='js/parentesco.js'></script>");
+

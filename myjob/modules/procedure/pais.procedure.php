@@ -2,29 +2,26 @@
 
 /**
  * Nombre de Archivo: pais.procedure.php
- * Fecha Creación: 11-08-2012 
- * Hora: 09:05:22 PM
  * @author Mario Alvarado
  */
+include_once '../class/Pais.class.php';
+$newPais = new Pais();
 if (isset($_POST["txtType"])) {
     if ($_POST["txtType"] == "add") {
         if (isset($_POST["txtPais"])) {
-            include_once '../class/Pais.class.php';
-            $newPais = new Pais();
             $newPais->descripcion = strtoupper($_POST["txtPais"]);
             $newPais->addPais();
-        } else if ($_POST["txtType"] == "search") {
-            
         }
+    } else if ($_POST["txtType"] == "search") {
+        $newPais->descripcion = strtoupper($_POST["txtPais"]) . "%";
+        $newPais->searchPais();
+    } else if ($_POST["txtType"] == "update") {
+        $newPais->idPais = $_POST["txtIdPais"];
+        $newPais->descripcion = strtoupper($_POST["txtPais"]);
+        $newPais->updatePais();
+    } else if ($_POST["txtType"] == "delete") {
+        $newPais->idPais = $_POST["txtIdPais"];
+        $newPais->deletePais();
     }
 }
-include_once '../class/Pais.class.php';
-$pais = new Pais();
-////$pais->descripcion="EL SALVADO%";
-$pais->descripcion=  strtoupper($_GET["term"])+"%";
-
-$pais->searchPais();
-//echo "[\"Choice1\", \"Choice2\"]";
-/*$var=$_GET["term"];
-echo '["Mario","'+$var+'"]';*/
 ?>

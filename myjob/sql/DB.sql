@@ -118,7 +118,7 @@ ENGINE = InnoDB;
 -- Table `miempleodb`.`nivel_estudio`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `miempleodb`.`nivel_estudio` (
-  `idnivel_estudio` INT NOT NULL ,
+  `idnivel_estudio` INT NOT NULL AUTO_INCREMENT ,
   `descripcion` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`idnivel_estudio`) )
 ENGINE = InnoDB;
@@ -177,7 +177,7 @@ COMMENT = 'Guarda la informacion de la carrera estudiada por el aspiran' /* comm
 -- Table `miempleodb`.`estado_carrera`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `miempleodb`.`estado_carrera` (
-  `idestado_carrera` INT NOT NULL ,
+  `idestado_carrera` INT NOT NULL AUTO_INCREMENT ,
   `descripcion` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`idestado_carrera`) )
 ENGINE = InnoDB;
