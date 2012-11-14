@@ -242,15 +242,19 @@ $(document).ready(function(){
     //validacion de formulario carrera
     $("#btnTipoEmpleo:button").button();
     $("#btnTipoEmpleo").click(function(){
-        if($.validarCampos("#frmTipoEmpleo")){
-            $.mensajeInformativo('Tipo de Empleo agregado exitosamente','i');
-            $.limpiarCampos("#frmTipoEmpleo");
+        if($(this).attr("value")=="Agregar"){
+            addTipoEmpleo();
         }else{
-            $.mensajeInformativo('Faltan campos por llenar','e');
+            updateTipoEmpleo();
         }
     });
     $('#txtTipoEmpleo').keypress(function(event){
         return $.validarTecla(event,'#txtTipoEmpleo','nombre');
+    });
+    
+    $("#btnSearchTipoEmpleo:button").button();
+    $("#btnSearchTipoEmpleo:button").click(function(){
+        searchTipoEmpleo();
     });
     
     //validacion de Nivel de Estudio
@@ -478,7 +482,7 @@ $(document).ready(function(){
     cargarComboNivelEstudio("#selNivelEstudioInstitucion");
     cargarComboInstitucion("#selCarreraInstitucion", "-");
     cargarComboTipoEquipoHerramienta("#selEH", "-");
-    cargarComboAreaTrabajo("#selArea", "-");
+    cargarComboAreaTrabajo("#selAreaTipoEmpleo", "-");
 
 });
 
@@ -495,3 +499,4 @@ document.write("<script type='text/javascript' src='js/estado.js'></script>");
 document.write("<script type='text/javascript' src='js/institucion.js'></script>");
 document.write("<script type='text/javascript' src='js/carrera.js'></script>");
 document.write("<script type='text/javascript' src='js/equipo.js'></script>");
+document.write("<script type='text/javascript' src='js/tipoEmpleo.js'></script>");

@@ -126,7 +126,7 @@ class AreaTrabajo extends DataSource {
                 $seleccionar = "";
                 echo "<option value='-'>Elija un area de empleo</option>";
                 while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
-                    if ($row["idarea_empleo"] == $this->fijar) {
+                    if ($this->fijar == $row["idarea_empleo"]) {
                         $seleccionar = "selected='selected'";
                     }
                     echo "<option value='" . $row["idarea_empleo"] . "' " . $seleccionar . ">" . $row["descripcion"] . "</option>";

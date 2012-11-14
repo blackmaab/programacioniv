@@ -5,14 +5,13 @@ function addTipoEmpleo(){
         $.post('modules/procedure/tipoEmpleo.procedure.php',
         {
             txtTipoEmpleo:$('#txtTipoEmpleo').attr('value'),
-            txtType:"add"
+            txtType:"add",
+            selArea:$('#selAreaTipoEmpleo').attr('value')
         },
         function(data){
             if(data=="true"){
                 $.mensajeInformativo('TipoEmpleo agregado exitosamente','i');				
-                $.limpiarCampos("#frmTipoEmpleo");                
-                cargarComboTipoEmpleo("#selEstadoEstado");
-                cargarComboTipoEmpleo("#selTipoEmpleoInstitucion");
+                $.limpiarCampos("#frmTipoEmpleo");                                
             }else{                    
                 $.mensajeInformativo('Hubo un error al guardar el tipoEmpleo. Intente de nuevo.','e');					
             }							
@@ -46,10 +45,11 @@ function searchTipoEmpleo(){
         $.mensajeInformativo('Faltan campos por llenar','e');
     }
 }
-function selTipoEmpleo(id,des){
+function selTipoEmpleo(id,des,idArea){    
     $("#txtIdTipoEmpleo").attr("value", id);
     $("#txtTipoEmpleo").attr("value",des);
     $("#btnTipoEmpleo").attr("value","Guardar");
+    cargarComboAreaTrabajo("#selAreaTipoEmpleo", idArea);
 }
 
 function updateTipoEmpleo(){
@@ -58,8 +58,9 @@ function updateTipoEmpleo(){
         $.post('modules/procedure/tipoEmpleo.procedure.php',
         {
             txtIdTipoEmpleo:$('#txtIdTipoEmpleo').attr('value'),
-            txtTipoEmpleo:$('#txtTipoEmpleo').attr('value'),
-            txtType:"update"
+            txtTipoEmpleo:$('#selAreaTipoEmpleo').attr('value'),
+            txtType:"update",
+            selArea:$('#selArea').attr('value')
         },
         function(data){
             if(data=="true"){
@@ -67,9 +68,7 @@ function updateTipoEmpleo(){
                 $.limpiarCampos("#frmTipoEmpleo");
                 //restableciendo botones
                 $("#btnTipoEmpleo").attr("value","Agregar");
-                searchTipoEmpleo();   
-                cargarComboTipoEmpleo("#selEstadoEstado");
-                cargarComboTipoEmpleo("#selTipoEmpleoInstitucion");
+                searchTipoEmpleo();                   
             }else{                    
                 $.mensajeInformativo('Hubo un error al modificar el tipoEmpleo. Intente de nuevo.','e');					
             }							
@@ -97,9 +96,7 @@ function deleteTipoEmpleo(id){
                 $.limpiarCampos("#frmTipoEmpleo");
                 //restableciendo botones
                 $("#btnTipoEmpleo").attr("value","Agregar");
-                searchTipoEmpleo();  
-                cargarComboTipoEmpleo("#selEstadoEstado");
-                cargarComboTipoEmpleo("#selTipoEmpleoInstitucion");
+                searchTipoEmpleo();                  
             }else{                                    
                 $.mensajeInformativo('Hubo un error al eliminar el tipoEmpleo. Intente de nuevo.','e');					
             }							
