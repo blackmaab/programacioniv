@@ -130,6 +130,7 @@ class AreaTrabajo extends DataSource {
                         $seleccionar = "selected='selected'";
                     }
                     echo "<option value='" . $row["idarea_empleo"] . "' " . $seleccionar . ">" . $row["descripcion"] . "</option>";
+                    $seleccionar = "";
                 }
             } else {
                 echo "<option value='-'>No hay datos</option>";

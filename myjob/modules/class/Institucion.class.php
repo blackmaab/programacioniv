@@ -147,13 +147,14 @@ class Institucion extends DataSource {
             $this->resultSet->execute();
             $coicidencias = $this->resultSet->rowCount();
             if ($coicidencias > 0) {
-                $selecionar = "";
+                $seleccionar = "";
                 echo "<option value='-'>Elija una institucion</option>";
                 while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
                     if ($this->fijar == $row["idinstitucion"]) {
-                        $selecionar = "selected='selected'";
+                        $seleccionar = "selected='selected'";
                     }
                     echo "<option value='" . $row["idinstitucion"] . "' " . $selecionar . ">" . $row["descripcion"] . "</option>";
+                    $seleccionar = "";
                 }
             } else {
                 echo "<option value='-'>No hay datos</option>";

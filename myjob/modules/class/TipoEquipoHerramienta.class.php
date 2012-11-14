@@ -127,10 +127,11 @@ class TipoEquipoHerramienta extends DataSource {
                 echo "<option value='-'>Elija un tipo de equipo</option>";
                 $seleccionar = "";
                 while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
-                    if($this->fijar==$row["idtipo_equipo_herramienta"]) {
+                    if ($this->fijar == $row["idtipo_equipo_herramienta"]) {
                         $seleccionar = "selected='selected'";
                     }
                     echo "<option value='" . $row["idtipo_equipo_herramienta"] . "' " . $seleccionar . ">" . $row["descripcion"] . "</option>";
+                    $seleccionar = "";
                 }
             } else {
                 echo "<option value='-'>No hay datos</option>";
