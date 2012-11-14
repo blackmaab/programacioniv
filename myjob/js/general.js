@@ -102,29 +102,20 @@ $(document).ready(function(){
     //validacion de formulario departamento | estado
     $("#btnEstado:button").button();
     $("#btnEstado").click(function(){
-        if($.validarCampos("#frmEstado")){
-            /*$.mensajeInformativo('Departamento | Estado agregado exitosamente','i');
-            $.limpiarCampos("#frmEstado");*/
-            $.post('../modulos/pages/guardarEstado.php',
-                $("#frmEstado").serialize(),
-                function(data){
-                    if(data=="true"){
-                        $.mensajeInformativo('Estado | Departamento agregado con exito','i');
-                        $.limpiarCampos("#frmEstado");
-                    }else{
-                        $.mensajeInformativo('Hubo un error al guardar el estado. Intente de nuevo.','e');
-                    }
-                }
-                );
+        if($(this).attr("value")=="Agregar"){
+            addEstado();            
         }else{
-            $.mensajeInformativo('Faltan campos por llenar','e');
+            updateEstado();
         }
     });
     $('#txtEstado').keypress(function(event){
         return $.validarTecla(event,'#txtEstado','nombre');
     });
      
-    
+    $("#btnSearchEstado:button").button();
+    $("#btnSearchEstado:button").click(function(){
+        searchEstado();
+    });
     
     //validacion de formulario Empresa
     $("#btnEmpresaCurriculum:button").button();
@@ -473,3 +464,4 @@ document.write("<script type='text/javascript' src='js/parentesco.js'></script>"
 document.write("<script type='text/javascript' src='js/tipoEquipoHerramienta.js'></script>");
 document.write("<script type='text/javascript' src='js/areaTrabajo.js'></script>");
 document.write("<script type='text/javascript' src='js/empresaCurriculum.js'></script>");
+document.write("<script type='text/javascript' src='js/estado.js'></script>");
