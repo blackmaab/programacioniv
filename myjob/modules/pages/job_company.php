@@ -12,13 +12,7 @@
                 <td>Area empleo:</td>
                 <td>
                     <select name="selNewAreaEmpleo" id="selNewAreaEmpleo" class="defaultSelect" title="Campo Requerido" alt="*">
-                        <option value="-">--Seleccione--</option>
-                        <option value="1">Administraci&oacute;n</option>
-                        <option value="2">Almacenamiento</option>
-                        <option value="3">Apoyo de Oficina</option>
-                        <option value="4">Banca | Servicios Financieros</option>
-                        <option value="5">Inform&aacute;tica | Internet</option>
-                        <option value="6">Otros</option>
+                        
                     </select>
                 </td>
             </tr>
@@ -26,13 +20,7 @@
                 <td>Cargo:</td>
                 <td>
                     <select name="selNewCargoEmpleo" id="selNewCargoEmpleo" class="defaultSelect" title="Campo Requerido" alt="*">
-                        <option value="-">--Seleccione--</option>
-                        <option value="1">Administrador</option>
-                        <option value="2">Gerente</option>
-                        <option value="3">Jefe Administrativo</option>
-                        <option value="4">Analista de Cr&eacute;dito</option>
-                        <option value="5">Programador</option>
-                        <option value="6">Otros</option>
+                        <option value="-">seleccione el area de empleo</option>
                     </select>
                 </td>
             </tr>

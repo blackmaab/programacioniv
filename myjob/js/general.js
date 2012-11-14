@@ -475,6 +475,9 @@ $(document).ready(function(){
         cargarComboEstado("#selPaisInstitucion","#selEstadoInstitucion","-");       
     });
     
+    $("#selNewAreaEmpleo").change(function(){
+        cargarComboTipoEmpleo("#selNewAreaEmpleo","#selNewCargoEmpleo","-");       
+    });
 
     //inicializando valores de los combobox
     cargarComboPais("#selPaisInstitucion");
@@ -483,6 +486,8 @@ $(document).ready(function(){
     cargarComboInstitucion("#selCarreraInstitucion", "-");
     cargarComboTipoEquipoHerramienta("#selEH", "-");
     cargarComboAreaTrabajo("#selAreaTipoEmpleo", "-");
+    cargarComboAreaTrabajo("#selNewAreaEmpleo", "-");
+    
 
 });
 

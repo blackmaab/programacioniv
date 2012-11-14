@@ -18,8 +18,9 @@ if (isset($_POST["txtType"])) {
     } else if ($_POST["txtType"] == "delete") {
         $newTipoEmpleo->idTipoEmpleo = $_POST["txtIdTipoEmpleo"];
         $newTipoEmpleo->deleteTipoEmpleo();
-    } else if ($_POST["txtType"] == "cargar") {
-        //$newTipoEmpleo->idTipoEmpleo = $_POST["txtIdTipoEmpleo"];
+    } else if ($_POST["txtType"] == "cargar") { 
+        $newTipoEmpleo->idAreaEmpleo=$_POST["selAreaEmpleo"];
+        $newTipoEmpleo->fijar=$_POST["txtFijar"];
         $newTipoEmpleo->cargarComboTipoEmpleo();
     }
 }

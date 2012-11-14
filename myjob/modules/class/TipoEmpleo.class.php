@@ -14,6 +14,7 @@ class TipoEmpleo extends DataSource {
     public $idTipoEmpleo = null;
     public $descripcion;
     public $idAreaEmpleo;
+    public $fijar;
 
     public function __construct() {
         $this->conexion(); //inicializa la conexion a la base de datos
@@ -124,15 +125,20 @@ class TipoEmpleo extends DataSource {
     public function cargarComboTipoEmpleo() {
         try {
 
-            $this->sqlQuery = "SELECT * FROM tipoEmpleo ORDER BY descripcion ASC";
+            $this->sqlQuery = "SELECT * FROM cargo_empleo where fk_areaEmpleo=:idareaempleo ORDER BY descripcion ASC";
             $this->resultSet = $this->conection->prepare($this->sqlQuery);
-            //$this->resultSet->bindParam(":descripcion", $this->descripcion);
+            $this->resultSet->bindParam(":idareaempleo", $this->idAreaEmpleo);
             $this->resultSet->execute();
             $coicidencias = $this->resultSet->rowCount();
             if ($coicidencias > 0) {
-                echo "<option value='-'>Elija un tipoEmpleo</option>";
+                $seleccionar="";
+                echo "<option value='-'>Elija un tipo de empleo</option>";
                 while ($row = $this->resultSet->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<option value='" . $row["idtipoEmpleo"] . "'>" . $row["descripcion"] . "</option>";
+                    if($this->fijar==$row["idcargo_empleo"]){
+                        $seleccionar="selected='selected'";
+                    }
+                    echo "<option value='" . $row["idcargo_empleo"] . "'>" . $row["descripcion"] . "</option>";
+                    $seleccionar="";
                 }
             } else {
                 echo "<option value='-'>No hay datos</option>";

@@ -106,14 +106,15 @@ function deleteTipoEmpleo(id){
 }
 
 
-function cargarComboTipoEmpleo(idCaja){
+function cargarComboTipoEmpleo(idCajaValor,idCajaCargar,fijar){
     $.post('modules/procedure/tipoEmpleo.procedure.php',
     {
-        //txtIdTipoEmpleo:id,            
-        txtType:"cargar"
+        selAreaEmpleo:$(idCajaValor).attr("value"),
+        txtType:"cargar",
+        txtFijar:fijar
     },
     function(data){            
-        $(idCaja).html(data);
+        $(idCajaCargar).html(data);
     }
     );
 }
