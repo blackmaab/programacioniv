@@ -5,9 +5,9 @@
         </tr>
   
         <tr>
-            <td>Descripci&oacute;n:</td>
-            <td><input type="text" id="txtDescripcionEstadoCarrera" name="txtDescripcionEstadoCarrera" title="Campo Requerido" alt="*" class="defaultText"/></td>
-            <td> 
+            <td>Descripci&oacute;n:
+            <input type="text" id="txtDescripcionEstadoCarrera" name="txtDescripcionEstadoCarrera" title="Campo Requerido" alt="*" class="defaultText"/>
+             
                 <input type="button" id="btnEstadoCarrera" name="btnEstadoCarrera" value="Agregar">
                 <input type="hidden" id="txtIdEstadoCarrera">
             </td>

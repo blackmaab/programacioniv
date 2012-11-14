@@ -4,9 +4,9 @@
             <td><h4>Agregar un nuevo Tipo de Documento.</h4></td>
         </tr>
         <tr>
-            <td>Tipo Documento:</td>
-            <td><input type="text" id="txtTipoDocumento" name="txtTipoDocumento" class="defaultText" title="Campo Requerido" alt="*" /></td>
-            <td> 
+            <td>Tipo Documento:
+                <input type="text" id="txtTipoDocumento" name="txtTipoDocumento" class="defaultText" title="Campo Requerido" alt="*" />
+
                 <input type="button" id="btnTipoDocumento" name="btnTipoDocumento" value="Agregar">
                 <input type="hidden" id="txtIdTipoDocumento">
             </td>

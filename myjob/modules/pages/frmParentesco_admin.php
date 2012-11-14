@@ -4,9 +4,9 @@
             <td><h4>Agregar un nuevo Tipo de Parentesco.</h4></td>
         </tr>
         <tr>
-            <td>Nuevo parentesco:</td>
-            <td><input type="text" id="txtParentesco" name="txtParentesco" title="Campo Requerido"  class="defaultText" alt="*"/></td>        
-            <td> 
+            <td>Nuevo parentesco:
+                <input type="text" id="txtParentesco" name="txtParentesco" title="Campo Requerido"  class="defaultText" alt="*"/>
+
                 <input type="button" id="btnParentesco" name="btnParentesco" value="Agregar">
                 <input type="hidden" id="txtIdParentesco">
             </td>

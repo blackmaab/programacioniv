@@ -2,7 +2,7 @@
     <table>
         <tr>
             <td>Nivel de Estudio:</td>
-            <td><input type="text" id="txtNivelEstudio" name="txtNivelEstudio" title="Campo Requerido" alt="*"/></td>       
+            <td><input type="text" id="txtNivelEstudio" name="txtNivelEstudio" title="Campo Requerido" alt="*" class="defaultText"/></td>       
             <td> 
                 <input type="button" id="btnNivelEstudio" name="btnNivelEstudio" value="Agregar">
                  <input type="hidden" id="txtIdNivelEstudio">

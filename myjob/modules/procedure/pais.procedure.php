@@ -8,10 +8,8 @@ include_once '../class/Pais.class.php';
 $newPais = new Pais();
 if (isset($_POST["txtType"])) {
     if ($_POST["txtType"] == "add") {
-        if (isset($_POST["txtPais"])) {
-            $newPais->descripcion = strtoupper($_POST["txtPais"]);
-            $newPais->addPais();
-        }
+        $newPais->descripcion = strtoupper($_POST["txtPais"]);
+        $newPais->addPais();
     } else if ($_POST["txtType"] == "search") {
         $newPais->descripcion = strtoupper($_POST["txtPais"]) . "%";
         $newPais->searchPais();

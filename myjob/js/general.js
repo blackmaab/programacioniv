@@ -127,17 +127,21 @@ $(document).ready(function(){
     
     
     //validacion de formulario Empresa
-    $("#btnEmpresa:button").button();
-    $("#btnEmpresa").click(function(){
-        if($.validarCampos("#frmEmpresa")){
-            $.mensajeInformativo('Empresa agregada exitosamente','i');
-            $.limpiarCampos("#frmEmpresa");
+    $("#btnEmpresaCurriculum:button").button();
+    $("#btnEmpresaCurriculum").click(function(){
+        if($(this).attr("value")=="Agregar"){
+            addEmpresaCurriculum();            
         }else{
-            $.mensajeInformativo('Faltan campos por llenar','e');
+            updateEmpresaCurriculum();
         }
     });
     $('#txtDescripcionEmpresa').keypress(function(event){
         return $.validarTecla(event,'#txtDescripcionEmpresa','nombre');
+    });
+    
+    $("#btnSearchEmpresaCurriculum:button").button();
+    $("#btnSearchEmpresaCurriculum:button").click(function(){
+        searchEmpresaCurriculum();
     });
     
     //validacion de formulario Empresa
@@ -203,16 +207,21 @@ $(document).ready(function(){
     //validacion de formulario institucion educativa
     $("#btnArea:button").button();
     $("#btnArea").click(function(){
-        if($.validarCampos("#frmAreaTrabajo")){
-            $.mensajeInformativo('Area de empleo agregada exitosamente','i');
-            $.limpiarCampos("#frmAreaTrabajo");
+        if($(this).attr("value")=="Agregar"){
+            addAreaTrabajo();            
         }else{
-            $.mensajeInformativo('Faltan campos por llenar','e');
+            updateAreaTrabajo();
         }
     });
     $('#txtDescripcionArea').keypress(function(event){
         return $.validarTecla(event,'#txtDescripcionArea','nombre');
     });
+    
+    $("#btnSearchAreaTrabajo:button").button();
+    $("#btnSearchAreaTrabajo:button").click(function(){
+        searchAreaTrabajo();
+    });
+    
     //validacion de formulario carrera
     $("#btnCarrera:button").button();
     $("#btnCarrera").click(function(){
@@ -440,14 +449,18 @@ $(document).ready(function(){
     });
     
     //validacion del formulario tipo de equipo
-    $("#btnEquipo:button").button();
-    $("#btnEquipo").click(function(){        
-        if($.validarCampos("#frmTipoEquipo")){            
-            $.mensajeInformativo('Tipo Equipo | Herramienta agregado exitosamente','i');
-            $.limpiarCampos("#frmTipoEquipo");                                  
+    $("#btnTipoEquipoHerramienta:button").button();
+    $("#btnTipoEquipoHerramienta").click(function(){        
+        if($(this).attr("value")=="Agregar"){
+            addTipoEquipoHerramienta();            
         }else{
-            $.mensajeInformativo('Faltan campos por llenar','e');
+            updateTipoEquipoHerramienta();
         }
+    });
+    
+    $("#btnSearchTipoEquipoHerramienta:button").button();
+    $("#btnSearchTipoEquipoHerramienta:button").click(function(){
+        searchTipoEquipoHerramienta();
     });
 });
 
@@ -457,4 +470,6 @@ document.write("<script type='text/javascript' src='js/estadoCarrera.js'></scrip
 document.write("<script type='text/javascript' src='js/nivelEstudio.js'></script>");
 document.write("<script type='text/javascript' src='js/tipoDocumento.js'></script>");
 document.write("<script type='text/javascript' src='js/parentesco.js'></script>");
-
+document.write("<script type='text/javascript' src='js/tipoEquipoHerramienta.js'></script>");
+document.write("<script type='text/javascript' src='js/areaTrabajo.js'></script>");
+document.write("<script type='text/javascript' src='js/empresaCurriculum.js'></script>");
